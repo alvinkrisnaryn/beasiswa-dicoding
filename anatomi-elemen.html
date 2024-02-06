@@ -369,6 +369,65 @@
         <img src="img/page-23-3.png" alt="">
         <img src="img/page-23-4.png" alt="">
         <img src="img/page-23-5.png" alt="">
+    <h3>Input Text</h3>
+    <p>Elemen <i>input</i> merupakan elemen yang sangat sering dipakai untuk mendapatkan data dari user. Mengapa hal tersebut terjadi? Hal ini karena elemen input memiliki banyak sekali tipe-tipenya, mulai dari teks, password, email, search, file, dsb. Tidak hanya itu, dari sekian tipe input, masing-masingnya juga didukung oleh atribut khusus sehingga pembuatan formulir semakin powerful.</p>
+    <p>Berikut adalah macam-macam tipe <i>input</i> di dalam elemen HTML</p>
+    <img src="img/page-24-1.png" alt="">
+    <img src="img/page-24-2.png" alt="">
+    <img src="img/page-24-3.png" alt="">
+    <img src="img/page-24-4.png" alt="">
+    <h3>Non-Single Line Input Element</h3>
+    <p>HTML memiliki elemen khusus yang memungkikan user menuliskan teks dalam banyak baris. Mari kita berkenalan dengan <i>textarea</i>. Elemen <i>textarea</i> ini berbeda dengan elemen input sebelumnya. Selain nama elemen yang menjadi pembeda, elemen <i>textarea</i> memiliki tag penutup agar dapat berfungsi dengan baik</p>
+    <img src="img/page-24-5.png" alt="">
+    <p>Jika diperhatikan, Anda akan melihat dua atribut pada elemen textarea, yaitu rows dan cols. Kedua atribut ini akan menentukan ukuran dari elemenya.</p>
+    <h3>Label Element</h3>
+    <p>Pembuatan elemen input sudah umum jika dijajarkan dengan elemen label. Ada banyak sekali keuntungan jika memberikan keterangan-dengan kata lain, kita bisa menyebutkan caption-pada masing-masing elemen input, elemen lainnya seperti <i>textarea</i> juga perlu disandingkan dengan elemen label. Berikut beberapa keuntungan penerapan label untuk elemen input sebagai berikut</p>
+    <ul>
+        <li>
+            Elemen input yang berasosiasi dengan elemen label akan memberikan kemampuan bagi screen reader untuk menjelaskan fungsi dari elemen input tersebut. Dalam hal ini, ia akan meningkatkan aksesibilitas. Tentunya, ini akan sangat bermanfaat bagi penyandang disabilitas.
+        </li>
+        <li>
+            Memberikan kemampuan bagi browser untuk mengalihkan langsung pada elemen input saat elemen label yang berasosiasi dengannya ditekan atau klik.
+        </li>
+    </ul>
+    <p>Ada dua langkah untuk menghubungkan elemen label dan input. Pertama, menambahkan atribut id pada elemen input beserta value-nya. Kedua, menambahkan atribut for pada elemen label dan value-nya. Apakah sudah selesai sampai sini? Jawabannya, belum. Kita perlu memberikan value yang sama pada kedua atribut (id dan for). Dengan cara ini, elemen label akan berasosiasi dengan elemen input dan kita akan mendapatkan dua keuntungan yang telah dibahas sebelumnya.</p>
+    <img src="img/page-24-6.png" alt="">
+    <h3>Atribut pada Elemen Input</h3>
+    <p>Sebelumnya, kita sempat menyinggung bahwa atribut yang didukung sangat beragam selain tipe elemen input. Ada atribut yang bekerja untuk semua tipe input dan ada atribut yang hanya dikhususkan bagi satu tipe. Berikut adalah contoh penerapan atribut <i>placeholder</i> dan <i>required</i>.</p>
+    <img src="img/page-25-1.png" alt="">
+    <p>Dua atribut di atas merupakan atribut yang sering dimanfaatkan ketika membuat formulir. Atribut placeholder digunakan untuk memberikan contoh atau referensi data sebagai panduan user mengisi data, sedangkan atribut required menandakan bahwa elemen input tersebut wajib diisi. Berikut adalah beberapa atribut yang menurut kami sering digunakan ketika membangun formulir.</p>
+    <img src="img/page-25-2.png" alt="">
+    <img src="img/page-25-3.png" alt="">
+    <img src="img/page-25-4.png" alt="">
+    <img src="img/page-25-5.png" alt="">
+    <p>Ada banyak sekali atribut-atribut yang tersedia. Tidak hanya memberikan fitur lebih, beberapa atribut lainnya dapat mengaktifkan proses validasi terhadap data yang dimasukkan user, seperti required, pattern, max, maxlength, dsb.</p>
+    <p>Jika Anda ingat, menentukan tipe pada elemen input merupakan salah satu penerapan validasi. Contohnya, jika Anda menerapkan tipe email dan tidak mengisi data dengan email valid, sebuah popup error akan muncul untuk memberi petunjuk pada user agar data yang dimasukkan valid. Itulah beberapa atribut pada elemen input yang dapat dimanfaatkan untuk memberikan kemampuan yang lebih dari sekadar input biasa.</p>
+    <h3>Mengirim Data Formulir</h3>
+    <p>Berbicara mengenai mengirim data dari formulir ke server, kita membutuhkan satu elemen esensial dalam membangun formulir. Sebelumnya, kita hanya belajar tentang variasi elemen input untuk mendapatkan data yang sesuai. Ada satu elemen yang berfungsi sebagai wrapper (pembungkus) dari keseluruhan kolom input atau formulir. Elemen yang dimaksud adalah <i>form</i>.</p>
+    <img src="img/page-26-1.png" alt="">
+    <h4>Atribut Name di Elemen Input</h4>
+    <p>Dalam mengirimkan data ke server, kita wajib menerapkan atribut <i>name</i> pada seluruh kolom input dalam formulir. Contohnya, Anda ingin membuat formulir untuk melakukan pemesanan kamar hotel. Anda harus memberi atribut name pada seluruh elemen input</p>
+    <img src="img/page-26-2.png" alt="">
+    <p>Mengapa hal ini diperlukan? Seharusnya, setiap data dikirimkan dalam bentuk pasangan key dan value. Key merupakan identitas atau nama dari data yang dikirimkan, sedangkan value adalah data yang diisi oleh user. Hal ini akan memberikan kemampuan pada server untuk mengambil data berdasarkan key-nya. Lebih jelasnya, kita akan melihat penjelasan pada <strong>Cara Membawa Data Formulir</strong></p>
+    <h4>Cara Membawa Data Formulir</h4>
+    <ol>
+        <li>Atribut Action</li>
+        <p>Atribut action akan menentukan alamat tujuan dari pengiriman data. Kita bisa memberikannya URL yang mengarah pada suatu server atau kadang disebut sebagai API. Server yang dimaksud dapat server yang berada pada domain yang sama atau berbeda. Dalam hal ini, kita bisa memberikan URL yang relatif atau absolut.</p>
+        <img src="img/page-26-3.png" alt="">
+        <li>Atribut Method</li>
+        <p>Atribut ini akan menentukan cara data dikirimkan ke server. Tidak hanya alamat yang kita butuhkan, ada beberapa cara atau proses dalam mengirimkan data ke server. Semua ini dilakukan dengan menentukan metode pengiriman. Ada dua buah metode yang bisa digunakan untuk mengirimkan data pada formulir HTML, yaitu GET dan POST.</p>
+        <ul>
+            <li>Metode Get</li>
+            <p>Biasanya, metode ini digunakan untuk mendapatkan data dari server. Data tersebut akan diterima oleh browser melalui body response (HTTP response). Tidak hanya itu, HTTP request juga memiliki body request untuk mengirimkan data dari browser ke server. Namun, body request dengan metode GET akan kosong. Hal ini karena setiap data yang dikirimkan akan diletakkan dalam URL parameters.</p>
+            <img src="img/page-26-4.png" alt="">
+            <p>Jika setiap input telah diisi dan user menekan tombol submit, setiap data akan diletakkan dalam URL parameter. Data akan diletakkan dalam pasangan key dan value. Key adalah atribut nama pada elemen input, sedangkan value adalah nilai yang diisi oleh user. Berikut adalah tampak URL dari request yang akan diperoleh. Sebab ada beberapa kolom input yang tersedia, setiap pasangan key dan value akan dipisahkan dengan karakter ampersand (&).</p>
+            <li>Metode Post</li>
+            <p>Metode lain yang bisa digunakan adalah metode POST. Ini merupakan metode untuk mengirimkan data dari browser ke server. Umumnya, metode ini meminta server menanggapi terhadap data yang telah dikirimkan oleh browser dan mengharapkan pengembalian dari hasil tanggapan tersebut (response).</p>
+            <p>Silakan perhatikan kembali formulir login sebelumnya. Jika metode GET tidak memiliki body request dan menyebabkan data-data diletakkan dalam URL parameters, metode POST akan berperilaku sebaliknya. Maksudnya, setiap data tidak akan berada pada URL, tetapi mereka akan diletakkan dalam body request.</p>
+            <img src="img/page-26-5.png" alt="">
+        </ul>
+    </ol>
+
 </body>
 
 </html>
