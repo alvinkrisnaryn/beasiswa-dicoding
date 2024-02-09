@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan CSS</title>
+</head>
+<body>
+    <h3>Pengantar CSS</h3>
+    <p><strong>CSS</strong> atau <strong>Cascanding Style Sheet</strong> adalah standar dari W3C untuk mengatur
+    visualisasi berkas yang ditulis pada HTML</p>
+    <p>Pada modul ini, kita akan belajar penggunaan dasar lainnya. Tepatnya, mulai dari membuat berkas CSS, aturan 
+        struktur sintaksnya, teknik penerapan, konsepnya, hingga menerapkan dasar styling, seperti memberikan warna 
+        pada sebuah teks.</p>
+    <img src="img-css/page-1-1.png" alt="">
+    <p>Sintaks CSS berbeda dengan HTML, begitu pula dengan JavaScript. CSS bukanlah sebuah bahasa pemrograman karena 
+        tidak ada logika, tidak ada sintaks pengondisian, tidak ada proses iterasi, dsb. padanya. CSS hanya sebuah 
+        <em>declarative language</em> yang digunakan untuk mendeklarasikan suatu nilai yang nantinya digunakan untuk mengatur 
+        tampilan sebuah elemen HTML pada browser.</p>
+    <h3>Keuntungan dan Cara Kerja CSS</h3>
+    <p>Dengan menerapkan CSS, tampilan website kita akan lebih menarik. Berikut adalah beberapa keuntungan yang didapatkan ketika
+        kita menerapkan CSS
+    </p>
+    <ul>
+        <li><strong>Dapat mengontrol dan menerapkan layout secara presisi.</strong></li>
+        <p>Dengan menggunakan CSS kita bisa membuat sebuah website terlihat seperti dokumen cetak dengan desai yang menarik dan presisi.</p>
+
+        <li><strong>Menghindari pekerjaan yang berulang-ulang dalam menerapkan styling</strong></li>
+        <p>Kita dapat menetapkan styling pada beberapa berkas HTML hanya dengan menggunakan satu berkas CSS</p>
+
+        <li><strong>Didukung banyak browser</strong></li>
+        <p>Seluruh browser saat ini minimal sudah mengukung CSS versi 2. Untuk browser populer, seperti Chorme dan Firefox, sudah mendukung 
+            CSS versi 3.</p>
+    </ul>
+    <h3>Cara Style Sheet Bekerja</h3>
+    <p>Sebuah style sheet bekerja melalui tahapan berikut.</p>
+    <ol>
+        <li>Dimuali dari sebuah dokumen yang telah ditandai dengan tag elemen HTML.</li>
+        <li>Menuliskan aturan styling untuk menentukan tampilan elemen HTML.</li>
+        <li>Melampirkan aturan styling yang sudah dibuat pada dokumen HTML. Ketika browser memuat dokumen, tampilan elemen akan menyesuaikan 
+            dengan aturan styling yang sudah diterapkan</li>
+    </ol>
+    <h3>Menulis Aturan Styling</h3>
+    <p>Sebuah style sheet dibuat dari satu atau lebih aturan <em>styling</em> (biasa disebut dengan  <em><b>rules</b></em> atau 
+        <em><b>rule-sets</b></em>) yang mendeskripsikan cara sebuah elemen atau sebuah kelompok elemen ditampilkan dalam jendela 
+        browser.</p>
+    <p>Langkah awal belajar CSS adalah dengan memahami sebuah bagian <em>rule</em>. Berikut adalah dua contoh rules yang dituliskan dalam 
+        sebuah CSS. Rule pertama menetapkan sebuah warna hijau pada emenen <em>h1</em> dan kedua menetapkan ukutan font dan tipe font pada
+        sebuah elemen paragraf</p>
+    <img src="img-css/page-1-2.png" alt="">
+    <p>Dalam penggunaan CSS, terdapat dua bagian pada sebuah rule. Bagian pertama adalah identitas elemen atau elemen yang akan menerapkan 
+        rule (singkatnya kita akan sebut selector) dan kedua adalah deklarasi atau instruksi yang akan diterapkan pada sebuah selector.</p>
+    <img src="img-css/page-1-3.png" alt="">
+        <h4>Selector</h4>
+        <p>Pada contoh di atas, <em>h1</em> dan <em>p</em> digunakan sebagai selector. Ia dipanggil melalui tipe elemennya dan ini merupakan teknik
+        dasar dari pemanggilan selector. Properti dan nilainya yang terdapat dalam <em>delcadation/declaration block</em> akan diterapkan pada seluruh 
+        elemen <em>h1</em> dan <em>p</em> yang ada pada dokumen HTML. Pada materi selanjutnya, kita akan mengetahui berbagai cara lainnya untuk menetapkan 
+        selector dengan lebih canggih lagi</p>
+        <h4>Declaration</h4>
+        <p>Bagian deklarasi terdiri dari pasangan properti dengan nilainya. Kita bisa menetapkan lebih dari satu deklarasi pada satu rule; contohnya seperti 
+            pada selector <em>p</em>, kita menetapkan lebih dari satu deklarasi pada <em>declaration block</em>. Setiap deklarasinya harus diakhiri dengan 
+            <em>semicolon</em> (;) sebagai tanda diakhirnya sebuah deklarasi</p>
+        <p>Karena CSS tidak memperhatikan spasi (sama seperti bahasa pemrograman pada umumnya), sebaiknya penulisan deklarasi selalu diawali dengan garis baru 
+            agar mudah dibaca dan dipahami</p>
+        <img src="img-css/page-1-4.png" alt="">
+        <p>Namun, tetaplah ingat, walaupun CSS tidak memperhatikan spasi, untuk satuan nilai semisal px, em, dan lainnya harus dituliskan tanpa spasi pada nilainya. 
+            Contohnya berikut.</p>
+        <img src="img-css/page-1-5.png" alt="">
+        <h4>Fitur Komentar</h4>
+        <p>Komentar digunakan untuk menjelaskan kode dan dapat menbantu ketika anda mengedit kode sumber dilain waktu. Hal yang tertulis akan diabaikan oleh browser dan 
+            tidak akan ditampilkan dibrowser. Hal ini menjadi opsi baik untuk memberi catatan atau informasi dokumentasi pada kode.</p>
+        <p>Sebagaimana contoh yang telah beberapa kali Anda lihat di atas, CSS comments ditempatkan dalam elemen <em>style</em> dengan cara penulisan diawali “/*” dan diakhiri “*/” 
+            seperti kode berikut.</p>
+        <img src="img-css/page-1-6.png" alt="">
+    <h3>Menerapkan Style Sheet</h3>
+    <p><em>External Style Sheet</em> adalah berkas terpisah yang didalamnya hanya ada CSS rules. Berkas harus berekstensi <b>.css</b> dan akan dihubungkan dengan dokumen HTML. Cara ini 
+        merupakan yang paling <em>powerful</em> dalam menerapkan styling. Dengan cara ini, satu berkas styling (.css) dapat digunakan oleh banyak berkas HTML.</p>
+    <p>Untuk menautkan berkas .css dengan dokumen HTML, kita dapat gunakan elemen <em>link</em> pada <em>head</em> berkas HTML. Contohnya berikut.</p>
+    <img src="img-css/page-2-1.png" alt="">
+    <p>Pada elemen <em>link</em> tersebut, kita tetapkan berkas CSS yang digunakan dengan menggunakan atribut href dan beri nilai “stylesheet” pada atribut rel sebagai relationship (hubungan) 
+        antara berkas <strong>style.css</strong> dengan dokumen HTML. Pada contoh di atas, kita tahu bahwa berkas css yang digunakan adalah berkas lokal (berkas yang berada pada komputer/server 
+        kita sendiri). Nilai atribut href juga dapat berupa berkas .css yang tersedia melalui sebuah URL.</p>
+    <p>Contohnya, banyak pengembang menggunakan <b>bootstrap.min.css</b> untuk membantu penyusunan layout website-nya. Kita bisa menggunakannya pada berkas HTML dengan langsung menuliskan 
+        URL untuk berkas tersebut.</p>
+    <img src="img-css/page-2-2.png" alt="">
+    <blockquote>Catatan : Nama berkas yang mengandung “min.css” adalah penamaan format berkas CSS yang sudah di-minify atau diminimalkan dengan menghilangkan white space yang tidak digunakan.</blockquote>
+    <h3>Embedded Style Sheet</h3>
+    <p> <em>Embedded Style Sheet</em> adalah kumpulan rules yang dituliskan dalam berkas HTML dengan menggunakan elemen <em>style</em>. Dengan demikian, CSS rules yang dituliskan hanya dapat dicakup oleh
+        satu berkas HTML. Penulisan rules harus dituliskan dalam elemen <em>style</em> dan biasanya ditempatkan dalam <em>head</em> pada berkas HTML</p>
+    <img src="img-css/page-2-3.png" alt="">
+    <h3>Inline Style</h3>
+    <p><em>Inline Style</em> adalah styling yang diterapkan secara langsung pada HTML dengan menggunakan atribut <em>style</em>. Kita bisa memberi styling ke target elemennya. Bisa dikatakan juga bahwa kita 
+        memberikan style declaration dalam satu baris bersamaan dengan deklarasi elemen HTML. Kita juga tidak memerlukan selector lagi dalam metode ini.</p>
+    <p>Untuk memperbanyak styling properties (multiple propesties), kita tuliskan saja mereka dalam atribut yang sama, tetapi kita perlu memanfaatkan <em>semicolon</em> (;) sebagai pemisah antar styling propertiesnya</p>
+    <img src="img-css/page-2-4.png" alt="">
+    <p>Inline styles hanya diterapkan pada elemen tempat atribut style diterapkan. Teknik ini seharusnya dihindari, terkecuali benar-benar diperlukan untuk menggantikan sebuah styling yang ditetapkan pada Embedded Style Sheet 
+        atau External Style Sheet.</p>
+
+
+
+
+
+
+
+</body>
+</html>
