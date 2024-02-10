@@ -72,7 +72,7 @@
         <p>Sebagaimana contoh yang telah beberapa kali Anda lihat di atas, CSS comments ditempatkan dalam elemen <em>style</em> dengan cara penulisan diawali “/*” dan diakhiri “*/” 
             seperti kode berikut.</p>
         <img src="img-css/page-1-6.png" alt="">
-    <h3>Menerapkan Style Sheet</h3>
+    <h3>External Style Sheet</h3>
     <p><em>External Style Sheet</em> adalah berkas terpisah yang didalamnya hanya ada CSS rules. Berkas harus berekstensi <b>.css</b> dan akan dihubungkan dengan dokumen HTML. Cara ini 
         merupakan yang paling <em>powerful</em> dalam menerapkan styling. Dengan cara ini, satu berkas styling (.css) dapat digunakan oleh banyak berkas HTML.</p>
     <p>Untuk menautkan berkas .css dengan dokumen HTML, kita dapat gunakan elemen <em>link</em> pada <em>head</em> berkas HTML. Contohnya berikut.</p>
@@ -95,12 +95,44 @@
     <img src="img-css/page-2-4.png" alt="">
     <p>Inline styles hanya diterapkan pada elemen tempat atribut style diterapkan. Teknik ini seharusnya dihindari, terkecuali benar-benar diperlukan untuk menggantikan sebuah styling yang ditetapkan pada Embedded Style Sheet 
         atau External Style Sheet.</p>
+    <h3>Inheritance</h3>
+    <p>Styling HTML bersifat <em>Inheritance</em> yang berarti dapar mewarisi properti style "tertentu" dari suatu elemen ke elemen-elemen di dalamnya (<em>child-elements</em>).</p>
+    <p>Contohnya, CSS rules yang ditetapkan untuk elemen <em>body</em> akan diterapkan pada seluruh child-elements secara otomatis. Contoh lainnya, CSS rules yang diterapkan pada elemen <em>footer</em> dengan properti color: white
+        akan diterapkan pada seluruh elemen yang ada di dalamnya. Hal ini menjadi alasan memahami struktur dokumen itu penting.</p>
+    <img src="img-css/page-3-1.png" alt="">
+    <p>Berikut adalah penerapan studi kasus di atas</p>
+    <img src="img-css/page-3-2.png" alt="">
+    <h3>Group Selector</h3>
+    <p>Jika beberapa selector yang berbeda memiliki penerapan properti-properti yang sama, kita dapat menggabungkannya menggunakan group selector. Hal ini dapat meminimalkan penulisan kode yang berulang</p>
+    <img src="img-css/page-3-3.png" alt="">
+    <h3>Rule Order</h3>
+    <p>Sesuai dengan namanya, <em>cascading</em> artinya "mengalir". Demikian halnya dengan alur kerja CSS dalam membaca kode, mengalir dari atas ke bawah. Oleh karena itu, kita harus memperhatikan urutan dalam penulisan rules, terutama 
+        saat terjadi sebuah konflik. Konflik dapat terjadi karena kita menerapkan beberapa styling pada satu dokumen HTML dan menimpa styling yang telah diterapkan sebelumnya, baik disadari maupun tidak.</p>
+    <p>Contohnya, apa yang akan ditampilkan oleh browser ketika eksternal css mengharuskan elemen <em>p</em> menampilkan warna merah, tetapi pada embedded css <em>p</em> harus menampilkan warna biru? Kembali pada alur kerja CSS yang membaca 
+        dari atas ke bawah sehingga warna yang akan diterapkan adalah warna yang paling akhir didefinisikan.</p>
+    <img src="img-css/page-3-4.png" alt="">
+    <p>Namun, kita bisa membuat sebuah property styling agar dianggap penting oleh browser untuk diterapkan dan urutan tidak diperhatikan. Kita bisa menambahkan keyword <b>!important</b> pada akhir nilai propertinya.</p>
+    <img src="img-css/page-3-5.png" alt="">
+    <p>Gunakan !important ketika memang benar-benar dibutuhkan saja. Sebaiknya kita pahami aturan urutan pada CSS dengan baik sehingga meminimalisir penggunaan tanda tersebut.</p>
+    <p>Berikut adalah catatan yang sudah kita pelajari sejauh ini tentang <strong>styling</strong></p>
+    <ul>
+        <li>Rule</li>
+        <p>Sebuah aturan styling yang harus diterapkan pada elemen HTML. Dalam sebuah rule, ada selector dan deklarasi properti styling.</p>
 
+        <li>Selector</li>
+        <p>Bagian yang mengidentifikasi target elemen untuk menetapkan sebuah rule.</p>
 
+        <li>Declaration</li>
+        <p>Sebuah bagian dari rule yang terdiri dari pasangan properti dan nilainya.</p>
 
+        <li>External Style Sheet</li>
+        <p>Berkas terpisah yang di dalamnya hanya ada satu atau lebih rules yang akan digunakan pada website</p>
 
+        <li>Embedded Style Sheet</li>
+        <p>Kumpulan rules yang dituliskan dalam berkas HTML dengan menggunakan elemen <em>style</em>.</p>
 
-
-
+        <li>Inline Style</li>
+        <p>Styling yang diterapkan pada elemen HTML dengan menggunakan style.</p>
+    </ul>
 </body>
 </html>
