@@ -18,57 +18,94 @@
     </ul>
     <p>Mari kita bahas satu per satu tipe basic selector tersebut</p>
     <h3>Type Selector</h3>
-    <p>Type Selector menggunakan nama elemen sebagai target untuk diterapkannya rule. Dengan kata lain, ketika menggunakan selector ini tentu rule akan 
-        diterapkan pada seluruh elemen target yang ada pada dokumen HTML. Contoh sebagai berikut.</p>
+    <p>Type Selector menggunakan nama element sebagai target untuk diterapkannya rule. Dengan kata lain, ketika menggunakan selector ini tentu rule akan 
+        diterapkan pada seluruh element target yang ada pada dokumen HTML. Contoh sebagai berikut.</p>
     <img src="img-css/page-4-1.png" alt="">
     <h3>Class Selector</h3>
-    <p>Class Selector menetapkan target elemen berdasarkan nilai dari atribut <strong>class</strong> yang diterapkan pada elemennya. Untuk penulisan selector-nya 
+    <p>Class Selector menetapkan target element berdasarkan nilai dari atribut <strong>class</strong> yang diterapkan pada elemennya. Untuk penulisan selector-nya 
         diawali dengan tanda titik (.) dan dilanjutkan dengan nama class-nya. Contohnya berikut</p>
     <img src="img-css/page-4-2.png" alt="">
-    <p>Class bersifat <em>shareable</em> sehingga dapat diterapkan pada banyak elemen dengan tipe elemen yang berbeda-beda. Misalnya sebuah class <strong>red</strong> 
-        dapat diterapkan pada elemen paragraf dan juga heading untuk menampilkan teks berwana merah.</p>
+    <p>Class bersifat <em>shareable</em> sehingga dapat diterapkan pada banyak element dengan tipe element yang berbeda-beda. Misalnya sebuah class <strong>red</strong> 
+        dapat diterapkan pada element paragraf dan juga heading untuk menampilkan teks berwana merah.</p>
     <img src="img-css/page-4-3.png" alt="">
-    <p>Tidak hanya itu, sebuah elemen juga memungkinkan memiliki banyak nilai class sehingga kita dapat menerapkan lebih dari satu rule atau gabungan rule pada elemen target. 
+    <p>Tidak hanya itu, sebuah element juga memungkinkan memiliki banyak nilai class sehingga kita dapat menerapkan lebih dari satu rule atau gabungan rule pada element target. 
         Kita cukup menuliskan nama kelasnya dan dipisahkan dengan spasi untuk tiap kelasnya</p>
     <img src="img-css/page-4-4.png" alt="">
-    <p>Kita juga bisa menargetkan elemen secara spesifik yang memiliki sebuah class. Untuk melakukannya, kita tuliskan nama elemen target dan diikuti dengan titik (.) beserta 
+    <p>Kita juga bisa menargetkan element secara spesifik yang memiliki sebuah class. Untuk melakukannya, kita tuliskan nama element target dan diikuti dengan titik (.) beserta 
         nama kelasnya pada selector. Perhatikan contoh berikut.</p>
     <img src="img-css/page-4-5.png" alt="">
     <h3>ID Selector</h3>
-    <p>ID Selector menetapkan targer elemen berdasarkan nilai dari atribut <strong>id</strong> yang diterapkan pada elemennya. Mirip dengan class, atribut <strong>id</strong> dapat
-        diterapkan pada seluruh elemen HTML dan kebanyakan atribut ini digunakan untuk memberikan sebuah artikel arti pada <em>generic element</em>, seperti <em>div</em> dan <em>span</em>. 
-        Namun atribut id ini tidak bersifat <em>shareable</em>. Artinya, nilai id harus unik dan digunakan pada satu elemen saja.</p>
+    <p>ID Selector menetapkan targer element berdasarkan nilai dari atribut <strong>id</strong> yang diterapkan pada elemennya. Mirip dengan class, atribut <strong>id</strong> dapat
+        diterapkan pada seluruh element HTML dan kebanyakan atribut ini digunakan untuk memberikan sebuah artikel arti pada <em>generic element</em>, seperti <em>div</em> dan <em>span</em>. 
+        Namun atribut id ini tidak bersifat <em>shareable</em>. Artinya, nilai id harus unik dan digunakan pada satu element saja.</p>
     <p>Untuk menerapkan selector dengan menggunakan id, kita gunakan tanda <em>octothorpe</em> (#) atau lebih familiar disebut <em>hash</em>. Berikut contohnya.</p>
     <img src="img-css/page-5-1.png" alt="">
     <blockquote>
-        Hal yang harus ditekankan lagi bahwa elemen <strong>id</strong> ini bersifat unik. Jika ingin menerapkan sebuah rule pada banyak elemen, sebaiknya mengguanakan atribut class.
+        Hal yang harus ditekankan lagi bahwa element <strong>id</strong> ini bersifat unik. Jika ingin menerapkan sebuah rule pada banyak element, sebaiknya mengguanakan atribut class.
     </blockquote>
     <h3>Attribute selector</h3>
-    <p>Attribute selector merupakan cara menetapkan target elemen berdasarkan sebuah atribut yang digunakan atau bahkan bisa lebih spesifik dengan nilainya. Contoh sebagai berikut</p>
+    <p>Attribute selector merupakan cara menetapkan target element berdasarkan sebuah atribut yang digunakan atau bahkan bisa lebih spesifik dengan nilainya. Contoh sebagai berikut</p>
     <img src="img-css/page-5-2.png" alt="">
     <p>Dari kode di atas, terlihat banyak sekali kondisi yang dapat diterapkan pada attribut selector. Agar dapat lebih mudah memahaminya, mari lihat tabel dibawah ini</p>
     <img src="img-css/page-5-3.png" alt="">
     <img src="img-css/page-5-4.png" alt="">
     <h3>Universal Selector</h3>
-    <p>Universal Selector digunakan untuk diterapkan pada seluruh elemen. Namun, selector ini juga bisa secara spesifik menargetkan sebuah elemen dengan menggabungkannya bersama selector yang 
+    <p>Universal Selector digunakan untuk diterapkan pada seluruh element. Namun, selector ini juga bisa secara spesifik menargetkan sebuah element dengan menggabungkannya bersama selector yang 
         lain. Berikut contohnya.</p>
     <img src="img-css/page-5-5.png" alt="">
     <h3>Adjacent Sibling Selector (+)</h3>
     <p>Adjacent Sibling Selector menggabungkan dua buah basic selector dengan menggunakan tanda + di antara keduanya. Contohnya berikut.</p>
     <img src="img-css/page-6-1.png" alt="">
-    <p>Adjacent Sibling Selector terdiri dari dua buah target elemen, tetapi hanya elemen kedua yang menerapkan rule selama elemen tersebut dituliskan langsung setelah elemen pertama pada berkas HTML.
-        Kedua elemen itu harus berada di induk elemen yang sama</p>
+    <p>Adjacent Sibling Selector terdiri dari dua buah target element, tetapi hanya element kedua yang menerapkan rule selama element tersebut dituliskan langsung setelah element pertama pada berkas HTML.
+        Kedua element itu harus berada di induk element yang sama</p>
     <img src="img-css/page-6-2.png" alt="">
     <img src="img-css/page-6-3.png" alt="">
     <img src="img-css/page-6-4.png" alt="">
     <h3>General Sibling Selector (~)</h3>
-    <p>Mirip seperti Adjacent Sibling Selector, tetapi rules akan diterapkan pada seluruh elemen kedua yang berada setelah elemen pertama selama masih memiliki induk yang sama, walaupun posisi dari 
-        elemen kedua tidak berada tepat setelahnya. General Sibling Selector menggunakan simbol tilda (~) untuk menetapkan elemennya.</p>
+    <p>Mirip seperti Adjacent Sibling Selector, tetapi rules akan diterapkan pada seluruh element kedua yang berada setelah element pertama selama masih memiliki induk yang sama, walaupun posisi dari 
+        element kedua tidak berada tepat setelahnya. General Sibling Selector menggunakan simbol tilda (~) untuk menetapkan elemennya.</p>
     <img src="img-css/page-6-5.png" alt="">
-    <p>Rule di atas akan diterapkan pada elemen paragraf yang berada setelah elemen img selama masih di dalam induk yang sama.</p>
+    <p>Rule di atas akan diterapkan pada element paragraf yang berada setelah element img selama masih di dalam induk yang sama.</p>
     <img src="img-css/page-6-6.png" alt="">
     <img src="img-css/page-6-7.png" alt="">
     <img src="img-css/page-6-8.png" alt="">
-
+    <h3>Child Selector dan Descendant Selector</h3>
+    <p>Child Selector dan descendant selector merupakan dua ti;e combinators selector lainnya. Mari kita bahas satu per satu.</p>
+    <h3>Child Selector (>)</h3>
+    <p>Child selector menggabungkan dua buah basic selector dengan menggunakan tanda <em>greater than</em> (>) di antara basic selectornya. Contohnya sebagai berikut</p>
+    <img src="img-css/page-7-1.png" alt="">
+    <p>CSS rule akan diterapkan pada seluruh element paragraf yang berada dalam element div <strong>secara langsung</strong>. Dalam arti lain, element paragraf merupakan <em><strong>child</strong></em> 
+        dari element div, bukan hanya sebuah turunannya.</p>
+    <img src="img-css/page-7-2.png" alt="">
+    <img src="img-css/page-7-3.png" alt="">
+    <h3>Descendant Selector</h3>
+    <p>Descendant selector mirip seperti child selector, tetapi hierarkinya lebih luas karena rule akan diterapkan pada seluruh element yang menjadi turunannya walaupun secara tidak langsung. Basic Selector
+        pertama yang dituliskan pada selector ini menggunakan spasi dalam menggabungkan dua basic selector.</p>     <img src="" alt="">
+    <img src="img-css/page-7-4.png" alt="">
+    <p>Dalam contoh di atas, CSS rule akan diterapkan pada seluruh element paragraf yang merupakan turunan d
+    <img src="img-css/page-7-5.png" alt="">
+    <img src="img-css/page-7-6.png" alt="">
+    <h3>Pseudo Selector</h3>
+    <p>Selain beberapa selector yang sudah kita pelajari, CSS masih memiliki dua selector lagi yang dapat kita manfaatkan untuk membantu menyeleksi element dalam menerapkan sebuah rule, yakni pseudo-class 
+        dan pseudo-element. Sebelum menjelaskan lebih detail tentang kedua selector tersebut, perlu kita ketahui pseudo selector berbeda dari selector yang sudah dibahas sebelumnya. Selector ini menargetkan 
+        element pada bagian yang “tidak terlihat”, seperti sifat pada element sehingga untuk menetapkannya tidak bisa menggunakan selector biasa.</p>
+    <h3>Pseduo-class Selector</h3>
+    <p>Pseduo-class merupakan sebuah class "semu" yang sebenarnya ada pada tiap element HTML. Pada contoh sebelumnya, kita sudah mengetahui salah satu pseudo-class selector. Dengan menggunakan selector ini kita 
+        dapat memilih element berdasarkan class yang tidak tampak pada dokumen. Kita bisa menetapkan rule hanya ketika sebuah tautan telah dikunjungi (:visited) atau ketika sebuah element diarahkan dengan kursor (:hover).
+        Untuk menggunakan pseudo-class, kita gunakan tanda titik dua (:) pada basic selector dan diikuti dengan pseudo-class-nya. </p>
+    <img src="img-css/page-8-1.png" alt="">
+    <img src="img-css/page-8-2.png" alt="">
+    <p>Tidak hanya yang dicontohkan di atas, ada banyak sekali class semu yang menjadi standar pseudo-classes dalam CSS. Kita bisa melihat indeks standar yang ada pada <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a>
+        dalam tautan resmi Mozilla</p>
+    <h3>Pseudo-element Selector</h3>
+    <p>Sama seperti pseudo-class, pseudo-element merupakan sebuah element "semu" yang sebenarnya ada, tetapi tidak tampak secara tertulis di HTML. Selector ini biasa digunakan ketika kita ingin menambahkan konten tepat sebelum
+        dan setelah sebuah element paragraf. Kita perlu menuliskan element/konten baru pada berkas HTML untuk menambahkan konten. Namun, kita dapat memanfaatkan pseudo-element untuk melakukannya. Pseudo-element yang dimaksud adalah
+        <em><strong>::before</strong></em> dan <em><strong>::after</strong></em></p>
+    <p>Konten yang dibuat dengan pseudo-element dituliskan pada CSS.</p>
+    <img src="img-css/page-8-3.png" alt="">
+    <img src="img-css/page-8-4.png" alt="">
+    <p>Untuk menggunakan pseudo-element, kita gunakan dua buah tanda titik dua (::) dan diikuti dengan nama pseudo-element-nya. Sebenarnya, kita bisa menggunakan sebuah karakter titik dua saja (:). Namun, kita perlu membedakannya dengan pseudo-class sehingga 
+        sebaiknya ketika menggunakan pseudo-element gunakanlah dua buah titik dua (::). Untuk mengetahui lebih lengkap mengenai berbagai macam pseudo-element, kita dapat melihat artikel <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Pseuod-elements</a>
+        yang ditulis oleh MDN</p>
 </body>
 </html>
