@@ -80,9 +80,9 @@
     <img src="img-css/page-7-3.png" alt="">
     <h3>Descendant Selector</h3>
     <p>Descendant selector mirip seperti child selector, tetapi hierarkinya lebih luas karena rule akan diterapkan pada seluruh element yang menjadi turunannya walaupun secara tidak langsung. Basic Selector
-        pertama yang dituliskan pada selector ini menggunakan spasi dalam menggabungkan dua basic selector.</p>     <img src="" alt="">
+        pertama yang dituliskan pada selector ini menggunakan spasi dalam menggabungkan dua basic selector.</p>    
     <img src="img-css/page-7-4.png" alt="">
-    <p>Dalam contoh di atas, CSS rule akan diterapkan pada seluruh element paragraf yang merupakan turunan d
+    <p>Dalam contoh di atas, CSS rule akan diterapkan pada seluruh element paragraf yang merupakan turunan div </p>
     <img src="img-css/page-7-5.png" alt="">
     <img src="img-css/page-7-6.png" alt="">
     <h3>Pseudo Selector</h3>
@@ -107,5 +107,152 @@
     <p>Untuk menggunakan pseudo-element, kita gunakan dua buah tanda titik dua (::) dan diikuti dengan nama pseudo-element-nya. Sebenarnya, kita bisa menggunakan sebuah karakter titik dua saja (:). Namun, kita perlu membedakannya dengan pseudo-class sehingga 
         sebaiknya ketika menggunakan pseudo-element gunakanlah dua buah titik dua (::). Untuk mengetahui lebih lengkap mengenai berbagai macam pseudo-element, kita dapat melihat artikel <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Pseuod-elements</a>
         yang ditulis oleh MDN</p>
+    <h3>Formatting Text</h3>
+    <p>Perlu kita ketahui, CSS memisahkan styling untuk font dan teks. Kita harus tahu kapan seharusnya menetapkan styling pada font atau menetapkannya pada teks. Mengapa kedua hal tersebut dipisah, padahal teks dan font adalah satu kesatuan, ketika setiap teks pasti menggunakan 
+        font untuk menampilkannya? Hal ini karena pada CSS sendiri teks dan font mempunyai properti masing-masing.</p>
+    <p>Jika kita ingin menetapkan styling pada tampilan teks itu sendiri, gunakanlah properti <strong>font</strong>. Contohnya, properti font dapat mengatur tipe font, ukuran, ketebalan, dan lainnya. Sementara itu, properti <strong>teks</strong> digunakan untuk mendukung hal lainnya dalam menampilkan teks seperti 
+        menetapkan text alignment, dekorasi, spacing, dan masih banyak lagi. Sebab dua hal ini dipisah, mari kita membahasnya satu per satu.</p>
+    <h3>Font Styling</h3>
+    <p>Ketika kita membuat dokumen teks, termasuk dokumen cetak, langkah awal yang kita lakukan biasanya menentukan jenis font yang akan digunakan; pada pengembangan website pun demikian. Dalam CSS, font ditentukan menggunakan beberapa paket properti font yang dapat mengatur tipe font, ukuran, ketebalan, dan <em>style</em>. 
+        Berikut merupakan daftar properti font yang akan kita pelajari</p>
+        <ul>
+            <li>Font-Family : Menetapkan jenis font yang akan diterapkan pada target.</li>
+            <li>Font-Size : Menentukan ukuran pada teks.</li>
+            <li>Font-Weight : Menentukan ketebalan pada teks.</li>
+            <li>Font-Style : Menetapkan styling yang diterapkan pada teks.</li>
+            <li>Font-Variant : Menentukan teks untuk menggunakan gaya <em>small caps</em> (huruf kapital kecil).</li>
+            <li>Font : Sebagai <em>shorthand</em> dari properti font yang ada.</li>
+        </ul>
+    <h3></h3>
+    <p>Pada modul pengenalan CSS, kita sudah mencoba menggunakan font properties ini untuk mengubah standar font yang ditampilkan pada browser dengan menggunakan font-family pada elemen body.</p>
+    <img src="img-css/page-9-1.png" alt="">
+    <img src="img-css/page-9-2.png" alt="">
+    <p>Pada rule tersebut, kita mengubah standar font yang digunakan browser dengan font ‘sans-serif’. Sebenarnya untuk nilai dari properti ini dapat lebih dari satu (dikenal sebagai font <em>font stack</em> ), tujuannya adalah sebagai <em>fallback</em> jika terjadi kegagalan dalam menggunakan font yang kita gunakan. Berikut adalah aturan yang harus kita gunakan</p>
+    <img src="img-css/page-9-3.png" alt="">
+    <p>Penjelasannya sebagai beikut.</p>
+        <ul>
+            <li>
+                Seluruh nilai font yang bukan merupakan <em>generic font families</em> harus dituliskan secara kapital. Contohnya, "Arial"
+            bukan dituliskan ""arial.
+            </li>
+            <li>
+                Gunakan tanda koma (,) untuk memisahkan antara nilai font yang digunakan.
+            </li>
+            <li>
+                Selalu tanda kutip (") untuk membungkus nilai font yang memiliki spasi pada namanya. Contoh "Open Sans".
+            </li>
+        </ul>
+    <p>Mungkin kita bertanya-tanya mengapa perlu memberikan lebih dari satu nilai pada font-family? Hal tersebut penting karena tidak semua browser mendukung semua jenis font.
+        Jadi, menambahkan lebih dari satu nilai font dapat memberikann alternatif pada browser dalam menampilkan font jika font utama yang diterapkan tidak didukung oleh browser</p>
+    <p>Bagaimana urutan prioritasnya? Dimulai dari jenis font yang pertama dituliskan. Jika font pertama didukung oleh browser, ia akan digunakan. Jika tidak, lantas browser akan 
+        memeriksa nilai font yang kedua dan menggunakannya apabila didukung, begitupun selanjutnya.</p>
+    <p>Hal yang perlu kita perhatikan adalah pastikan untuk menggunakan generic <em>font families</em> pada akhir nilai properti font-family. Nilai ini dipastikan didukung oleh 
+        seluruh browser saat ini. Lantas, apa saja nilai dari generic font families ini? Berikut adalah nilai-nilai generic font families yang dapat kita gunakan untuk <em>fallback mechanism</em>.</p>
+        <ul>
+            <li>
+                <strong>Serif</strong> : Jenis font yang memiliki runcing pada garis akhir karakternya. Times New Roman merupakan salah satu jenis serif font.
+            </li>
+            <li>
+                <strong>Sans-serif</strong> : Jenis font yang tidak meruncing pada garis akhir karakternya. Contohnya, "Open Sans", "Fira Sans", dan lainnya.
+            </li>
+            <li>
+                <strong>Monospace</strong> : Jenis font yang memiliki nilai lebar tiap karakternya sama. Consolas merupakan salah satu jenisnya.
+            </li>
+            <li>
+                <strong>Cursive</strong> : Jenis font yang tampak seperti <em>handwriting</em> atau hasil tulisan tangan.
+            </li>
+            <li>
+                <strong>Fantasy</strong> : Jenis font yang mempresentasikan karakteristik yang menyenangkan.
+            </li>
+            <li>
+                <strong>System-UI</strong> : Jika menerapkan nilai ini maka font yang diterapkan akan sama seperti font yang digunakan pada sistem operasi kita.
+            </li>
+            <li>
+                <strong>Math</strong> : Jenis font yang digunakan untuk penulisan rumus-rumus matematika.
+            </li>
+            <li>
+                <strong>Emoji</strong> : Jenis font yang digunakan untuk menampilakn emoji.
+            </li>
+            <li>
+                <strong>Fangsong</strong> : Jenis font yang menampilkan gaya penulisan Chinese.
+            </li>
+        </ul>
+    <h3>Font Face</h3>
+    <p>Kita sudah mengetahui cara mengubah font pada website dan juga mengetahui tipe font standar yang tersedia pada browser. Berbicara tentang tipe font, tidak jarang 
+        kita menemukan website yang menggunakan font unik atau yang tidak dimiliki pada komputer kita ketika menjelajah beberapa website yang ada di internet. Lantas, 
+        bagaimana cara font tersebut dapat ditampilkan?</p>
+    <p>Untuk hal ini, CSS memiliki fitur yang digunakan untuk memasukkan font eksternal ke dalam CSS, yakni mengguanakan <strong>@font-face</strong>. Berikut adalah 
+        contoh penulisan <strong>@font-face</strong>pada CSS.</p>
+    <img src="img-css/page-9-4.png" alt="">
+    <p>Setelah mendefinisikan font-face tersebut, ada nilai font-family baru bernilai "Dicoding Font" untuk diterapkan pada elemen HTML</p>
+    <img src="img-css/page-9-5.png" alt="">
+    <p>Pada kelas ini, kita tidak akan membahas secara detail mengenai <strong>@font-face</strong>. Jika ingin mempelajarinya, Anda bisa mengunjungi dokumentasi yang 
+        diberikan oleh Mozilla terkait <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</a></p>
+    <h3>Font Size</h3>
+    <p>Mengubah nilai font pada sebuah dokumen adalah hal yang sangat wajar terjadi, begitu pula pada website. Untuk menetapkan ukuran font, kita perlu menerapkan properti 
+        <strong>font-size</strong> dengan menetapkan nilai dari properti ini dengan menuliskan langsung nilai satuannya.</p>
+    <img src="img-css/page-9-6.png" alt="">
+    <p>Hal yang kita perlukan adalah memperhatikan ketika menuliskan nilai adan satunnya. Pastikan tidak ada jarak (spasi) diantaranya.</p>
+    <img src="img-css/page-9-7.png" alt="">
+    <p>Satuan dalam menetapkan ukuran font terbagi menjadi dua jenis.</p>
+        <ul>
+            <li>
+                <strong>Relative Unit</strong>
+                <p>Satuan yang nilainya tergantung pada suatu hal. Contohnya, ukuran viewport, induk elemen, atau ukuran teks standar.</p>
+            </li>
+            <li>
+                <strong>Absolute Unit</strong>
+                <p>Satuan yang nilainya telah ditentukan atau digunakan dalam dunia nyata.</p>
+            </li>
+        </ul>
+    <p>Berikut adalah daftar satuan yang dapat kita manfaatkan dalam menetapkan ukuran font beserta fungsinya.</p>
+    <p><strong>Relative Unit</strong></p>
+    <img src="img-css/page-9-8.png" alt="">
+    <img src="img-css/page-9-9.png" alt="">
+    <p><strong>Absolute Unit</strong></p>
+    <img src="img-css/page-9-10.png" alt="">
+    <p>Selain dengan menetapkan nilai dan satuanya secara langsung, kita juga bisa menggunakan nilai persentase untuk mengatur ukuran font.</p>
+    <img src="img-css/page-9-11.png" alt="">
+    <p>Pada contoh di atas, ukuran font dari elemen <em>h1</em> seharusnya memiliki ukuran 16px karena mewarisi dari induk elemennya (body). Namun, di bawahnya 
+        terdapat rule yang menargetkan secara spesifik untuk elemen h1 untuk menerapkan ukuran font sebesar 150% dari ukuran induknya. Dampaknya, elemen 
+        <em>h1</em> akan tampak 50% lebih besar dari elemen lain yang ada di dalam body.</p>
+    <img src="img-css/page-9-12.png" alt="">
+    <p>Hal yang terakhir, kita juga bisa menentukan ukuran font dengan menuliskan kata kunci secara spesifik yang tersedia pada CSS. Kata kunci tersebut : 
+        <strong>xx-small, x-small, small, medium, large, x-large,</strong> dan <strong>xx-large</strong>.</p>
+    <p>Kata kunci di atas tidak ada kaitannya dengan pengukuran tertentu (bukan ukuran yang absolute), tetapi nilainya diubah secara konsisten satu sama 
+        lain.</p>
+    <img src="img-css/page-9-13.png" alt="">
+    <p>Pada gambar di atas, kita bisa lihat bahwa standarnya browser menampilkan teks dengan nilai medium. Properti <strong>font-size</strong> dapat 
+        diaplikasikan ke seluruh elemen yang ada di HTML dan nilainya dapat diturunkan pada elemen turunannya.</p>
+    <h3>Font-Weight</h3>
+    <p>Setelah mengenal font families dan font size, selanjutnya ada juga font-weight yang digunakan untuk mengatur ketebalan dari font yang ditampilkan. 
+        Nilai dari properti ini dapat ditentukan dengan menggunakan <em>numeric values</em> (100 sampai 900) atau dengan menggunakan <em>descriptive terms</em>
+        (<strong>normal, bold, bolder,</strong>dan <strong>lighter</strong>)</p>
+    <img src="img-css/page-10-1.png" alt="">
+    <img src="img-css/page-10-2.png" alt="">
+    <h3>Font-Style</h3>
+    <p>Properti selanjutnya adalah font-style, properti ini digunakan untuk menentukan postur dari teks yang ditampilkan, yakni bentuknya vertikal (<strong>normal</strong>) 
+        atau miring (<strong>italic</strong> dan <strong>oblique</strong>).</p>
+    <img src="img-css/page-10-3.png" alt="">
+    <img src="img-css/page-10-4.png" alt="">
+    <p>Italic dan oblique keduanya menampilkan teks yang miring. Perbedaannya adalah italic menerapkan tipe miring (italic font version) dari suatu font 
+        sedangkan oblique adalah font normal yang hanya dibuat miring.</p>
+    <h3>Font-Variant</h3>
+    <p>Kita yang terbiasa dengan aplikasi document editor seperti Microsoft Word tentu tahu atau sudah mencoba fitur <em>small caps</em>. Fitur ini 
+        dapat membuat teks menjadi kapital tetapi dituliskan secara kecil dan merapat seperti berikut.</p>
+    <img src="img-css/page-10-5.png" alt="">
+    <img src="img-css/page-10-6.png" alt="">
+    <img src="img-css/page-10-7.png" alt="">
+    <h3>Shorthand</h3>
+    <p>Menspesifikasikan masing-masing nilai properti font akan menghasilkan banyak sekali kode repetitif. CSS memiliki properti CSS yang biasa disebut 
+        dengan shorthand properti. Ia memberikan suatu “jalan pintas” untuk menuliskan properti-properti tersebut ke dalam satu properti, yaitu font. Dengan
+        mengguanakan properti font, kita dapat menuliskan beberapa properti hanya dalam satu properti pada satu rule</p>
+    <img src="img-css/page-10-8.png" alt="">
+    <p>Nilai dari properti <strong>font</strong> merupakan nilai seluruh properti dari font yang sudah kita bahas. Tiap nilai dipisahkan menggunakan spasi. 
+        Pada properti ini, urutan nilai merupakan hal yang penting sehingga jangan sampai salah urutan dalam menuliskannya.</p>
+    <p>Walaupun begitu, kita bisa tidak menuliskan seluruh nilai properti yang ada, tetapi nilai dari properti <strong>font-size</strong> dan <strong>font-family</strong> 
+        wajib ada ketika menggunakan properti ini. Berikut adalah contoh penulisan minimal ketika kita menggunakan properti font.</p>
+    <img src="img-css/page-10-9.png" alt="">
+    
 </body>
 </html>
