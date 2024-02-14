@@ -253,6 +253,82 @@
     <p>Walaupun begitu, kita bisa tidak menuliskan seluruh nilai properti yang ada, tetapi nilai dari properti <strong>font-size</strong> dan <strong>font-family</strong> 
         wajib ada ketika menggunakan properti ini. Berikut adalah contoh penulisan minimal ketika kita menggunakan properti font.</p>
     <img src="img-css/page-10-9.png" alt="">
-    
+    <h3>Line Height</h3>
+    <p>Properti line-height digunakan untuk mengatur jarak minimal dari garis dasar ke garis dasar dalam menampilkannya teks pada halaman. Jika kita terbiasa dengan <em>software</em>
+        dokumen editor seperti Microsoft World, properti ini mirip dengan fungsi <em>line height</em>.</p>
+    <img src="img-css/page-11-1.png" alt="">
+    <p>Pada penjelasan diatas disebutkan "minimal" karena jika terdapat sebuah karakter yang tinggi atau besar dalam sebuah baris, tinggi dari baris pun 
+        akan menyesuaikan agar jarak tetap mengakomodasinya. Berikut adalah contoh tiga cara berbeda dalam menerapkan tinggi baris dua kali lebih tinggi dari ukuran font.</p>
+    <img src="img-css/page-11-2.png" alt="">
+    <img src="img-css/page-11-3.png" alt="">
+    <p>Cara pertama merupakan cara yang paling mudah digunakan karena hanya menentukan nilai dengan satu angka. Konsepnya, angka tersebut nantinya dikalikan  
+        dengan nilai font-size sebelum diterapkan pada nilai properti line-height. Contohnya, ukuran font standar pada paragraf adalah 16 piksel dan kita definisikan
+        properti line-height dengan nilai 2. Alhasil, seharusnya nilai properti line-height adalah 16 piksel * 2 = 32 piksel (dua kali lebih besar dari ukuran font).</p>
+    <h3>Text Indent</h3>
+    <p>Dalam membuat sebuah dokumen tidak jarang kita membutuhkan jarak/lekuk diawal paragraf, hal tersebut dapat dilakukan pada website dengan menerapkan properti 
+        <strong>text-indent</strong>. Kita dapat menentukan nilai properti ini melalui perhitungan panjang dalam <strong>px, em</strong> dan <strong>in</strong> atau 
+        bisa menggunakan nilai persentase (%). Nilai persentase dihitung berdasarkan lebar dari induk elemen.</p>
+    <p>Pada contoh ketiga kita bisa melihat bahwa pada nilai properti ini dapat diberikan nilai negatif. Jika kita menggunakannya, baris pertama pada paragraf akan 
+        keluar dari batas elemen yang menampungnya (biasa disebut <strong>hanging indent</strong>).</p>
+    <img src="img-css/page-11-4.png" alt="">
+    <p>Perlu diingat kembali, properti ini hanya berpengaruh pada awal baris paragraf. Jika kita ingin menerapkannya untuk seluruh baris kita dapat gunakan margin 
+        atau padding, keduanya akan dibahas pada materi box model.</p>
+    <h3>Text Alignment</h3>
+    <p>Kita bisa mengatur <em>text alignment</em> pada website seperti kita melakukannya pada aplikasi Microsoft Word dengan menggunakan properti text-align. Untuk 
+        standarnya, properti ini bernilai left atau biasa kita sebut rata kiri. Namun, standarnya bisa jadi menggunakan right atau rata kanan jika ada penerapan attribut 
+        <em>languange</em> dengan nilai bahasa yang arah bacanya berlawanan. Contohnya Arab.</p>
+    <img src="img-css/page-11-5.png" alt="">
+    <p>Bagaimana dengan materinya? Pasti kita sudah familier dengan nilai-nilai tersebut, kan? Berikut adalah contoh penggunaan dari properti text-align.</p>
+    <img src="img-css/page-11-6.png" alt="">
+    <img src="img-css/page-11-7.png" alt="">
+    <h3>Text Decoration</h3>
+    <p>Properti ini paling populer digunakan ketika kita ingin membuat garis bawah atau <em>underline</em> pada teks. Namun, tidak hanya itu, ada beberapa nilai lain 
+        yang dapat kita gunakan untuk properti ini, detailnya sebagai berikut</p>
+    <img src="img-css/page-12-1.png" alt="">
+    <p>Dengan menggunakan text decoration, kita dapat menghilangkan efek underline pada link yang ditampilkan dengan memberikan nilai text-decoration : none pada 
+        elemen <em>a</em>.</p>
+    <img src="img-css/page-12-2.png" alt="">
+    <img src="img-css/page-12-3.png" alt="">
+    <h3>Text Transform</h3>
+    <p>Pasti kita pernah mencoba fitur pada <em>document editor</em> yang dapat mengubah kapitalisasi pada teks, fitur ini sangat membantu kala kita ingin mengubah 
+        kapitalisasi tanpa harus menuliskan kembali teksnya. Pada CSS juga terdapat fitur serupa, yaitu dengan menggunakan properti <strong>text-transform</strong>.
+        Ketika kita menerapkan properti <strong>text-transform</strong> pada elemen teks, kapitalisasi akan berubah ketika halaman di-render tanpa harus mengubahnya 
+        pada dokumen HTML.</p>
+    <img src="img-css/page-12-4.png" alt="">
+    <p>Berikut adalah contoh penerapan teks-transform</p>
+    <img src="img-css/page-12-5.png" alt="">
+    <img src="img-css/page-12-6.png" alt="">
+    <h3>Word and Letter Spacing</h3>
+    <p>Properti selanjutnya yang bisa kita gunakan untuk memformat teks adalah <strong>letter-spacing</strong> dan <strong>word-spacing</strong>. Sebagaimana namanya, 
+        properti ini digunakan untuk mengatur spasi atau jarak pada teks. Properti letter-spacing digunakan untuk mengatur jarak antar huruf, sedangkan word-spacing 
+        digunakan untuk mengatur jarak antar kata.</p>
+    <img src="img-css/page-12-7.png" alt="">
+    <img src="img-css/page-12-8.png" alt="">
+    <h3>Text Shadow</h3>
+    <p>Memberikan bayangan pada teks telah menjadi hal yang umum digunakan meskipun tidak memiliki dukungan disemua browser. Pada CSS, kita dapat gunakan properti 
+        <strong>text-shadow</strong> untuk membuat bayangan pada teks (atau bisa disebut <em>drop shadow</em>)</p>
+    <p>Nilai properti ini cukup rumit karena membutuhkan tiga buah nilai dan satu buah nilai warna sehingga membutuhkan empat nilai dalam satu properti untuk 
+        menentukan bayangannya</p>
+    <ul>
+        <li>
+            Nilai Pertama : menunjukkan seberapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan.
+        </li>
+        <li>
+            Nilai kedua: menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan. 
+        </li>
+        <li>
+            Nilai ketiga (opsional): menentukan tingkat keburaman yang harus diterapkan pada bayangan.
+        </li>
+        <li>
+            Nilai keempat: menentukan warna yang digunakan pada bayangan.
+        </li>
+    </ul>
+    <p>Berikut adalah contoh penggunaan dari properti text-shadow.</p>
+    <img src="img-css/page-12-9.png" alt="">
+    <img src="img-css/page-12-10.png" alt="">
+
+
+
 </body>
 </html>
+
