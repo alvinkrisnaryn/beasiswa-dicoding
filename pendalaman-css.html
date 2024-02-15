@@ -326,7 +326,85 @@
     <p>Berikut adalah contoh penggunaan dari properti text-shadow.</p>
     <img src="img-css/page-12-9.png" alt="">
     <img src="img-css/page-12-10.png" alt="">
-
+    <h3>Pewarnaan</h3>
+    <p>Warna memberikan kesan hidup pada sebuah website. Jika kembali pada tahun 1993, kita akan hidup ketika website hanya memiliki <em>background</em> berwarna 
+        abu dengan teks hitam. Bisa dibayangkan betapa membosankan tampilan tersebut, kan?</p>
+    <img src="img-css/page-13-1.png" alt="">
+    <p>Gambar di atas merupakan tampilan halaman dari situs Yahoo sebagai mesin pencari pada tahun 1994, jika ingin melihat tampilan Yahoo lainnya dari tahun ke 
+        tahun, Anda dapat membuka <a href="https://www.webdesignmuseum.org/gallery/yahoo-1994">tautan ini</a>.</p>
+    <p>Pada saat itu, memang belum ada browser yang dapat mengatur perwarnaan hingga hadirnya Netsapce Navigator yang memungkinkan untuk melakukannya meskipun 
+        belum sesempurna saat ini. Syukurlah, kita cukup menggunakan properti-properti yang adan pada CSS untuk mengatur warna pada teks dan <em>background</em> 
+        pada saat ini. Terlebih, seluruh browser saat ini sudah mendukung <em>styling</em> menggunakan CSS sehingga kita tidak perlu memikirkan kompatibilitasnya.</p>
+    <p>Kali ini kita akan membahas tentang pewarnaan pada CSS. Tentunya, caranya dengan mengenal properti yang digunakan untuk mengatur warna teks dan <em>background</em>.
+        Namun sebelum itu, mari kita pelajari dahulu cara menetapkan warna pada CSS.</p>
+    <h3>Menetapkan Nilai Warna</h3>
+    <p>Setiap warna pada layar komputer kita terdiri dari campuran warna. Layar komputer dibuat dari ribuan kotak kecil yang biasanya disebut <em>piksel</em>. Ketika 
+        layar monitor tidak menyala, <em>piksel</em> pun tidak akan menyala. Ketika layat monitor menyala, tiap piksel dapat menghasilkan warna yang berbeda sehingga 
+        dapat menampilkan gambar.</p>
+    <p>Dalam piksel terdapat tiga buah lampu kecil berwarna merah, hijau, dan biru. Semua warna dimulai dengan tiga warna tersebut, sehingga menjadi ribuan warna yang 
+        kita kenal sampai saat ini.</p>
+    <img src="img-css/page-13-2.png" alt="">
+    <p>Ketika ingin menetapkan warna, kita tidak perlu menghafal kombinasi dari ketiga warna tersebut. Banyak cara untuk membantu kita dalam menetapkan warna yang kita 
+        inginkan. Contohnya seperti <em>color picker</em> yang ada dalam Photoshop. GIMP, atau Gravit Designer.</p>
+    <img src="img-css/page-13-3.png" alt="">
+    <p>Kita bisa melihat nilai RGB yang dipilih melalui <em>color picker</em>. Lantas, bagaimana jika kita tidak memiliki aplikasi desain seperti yang telah disebutkan 
+        tadi? Tenang. sekarang <em>color picker</em> tersedia <em>online</em>, bahkan ketika kita menuliskan "color picker" pada Google Search, tools tersebut akan tersedia 
+        pada hasil pencariannya</p>
+    <img src="img-css/page-13-4.png" alt="">
+    <p>Pada CSS, kita dapat menggunakan <em>numeric value</em> dan <em>predefined color name</em> untuk menetapkan nilai warna. Mari kita bahas satu per satu.</p>
+    <h3>Numeric Value</h3>
+    <p>Penetapan warna menggunakan <em>numeric value</em> adalah cara yang paling banyak digunakan karena dengan menggunakannya, kita dapat menentukan warna yang kita inginkan 
+        dengan tepat. Terlebih dengan bantuan <em>color picker</em>, kita tidak perlu repot-repot memahami dengan mencari nilai kode warna secara manual. Berikut contoh penulisan 
+        nilai warna pada CSS dengan <em>numeric value</em>.</p>
+    <img src="img-css/page-13-5.png" alt="">
+    <p>Kode tersebut merupakan nilai wanr hijau yang dituliskan dalam beberapa format. Dari kode tersebut, kita tahu tidak hanya format RGB yang dapat digunakan dalam menetapkan warna, 
+        Selain RGB ada format Hex dan HSL(Hue, Saturation, Light).</p>
+    <h3>Predefined Color Name</h3>
+    <p>Selain menggunakan format angka, menentukan warna juga dapat menggunakan sebuah kata, seperti blue, yellow, red dan lainnya.</p>
+    <img src="img-css/page-13-6.png" alt="">
+    <p>Dengan menggunakan kata, tenti kita dapat lebih mudah dan cepat dalam menentukan warna, tetapi mungkin hanya warna dasar yang dapat kita hafal. Sebab hampir seluruh browser saat 
+        ini mendukung 140 nama warna, kita dapat melihat apa saja warna yang tersedia pada pembahasan bertopik <a href="https://www.w3schools.com/colors/colors_names.asp">HTML color names</a> 
+        dari w3schools.com.</p>
+    <h3>Text Color</h3>
+    <p>Pada modul pengenalan CSS, sebetulnya kita sudah mencoba dengan mudahnya mengganti warna pada teks yang ditampilkan. Mungkin sebagian dari anda sudah mengetahuinya. Kita dapat dengan 
+        mudah mengganti warna teks menggunakan properti <strong>color</strong>.</p>
+    <p>Nilai properti color dapat berupa <em>predefined color name</em> atau sebuah <em>numeric value</em> dengan menggunakan RGB, RGBA, Hex, HSL, ataupun HSLA. Berikut contoh elemen <em>p</em> akan
+        diberi warna abu-abu (gray) dengan menggunakan beberapa cara.</p>
+    <img src="img-css/page-14-1.png" alt="">
+    <p>Properti color dapat diaplikasikan ke seluruh elemen yang ada dalam HTML dan lainnya dapat diturunkan pada elemen turunannya. Jadi kita bisa mengubah warna teks dalam seluruh dokumen HTML dengan 
+        menerapkan properti color pada elemen body.</p>
+    <img src="img-css/page-14-2.png" alt="">
+    <img src="img-css/page-14-3.png" alt="">
+    <h3>Background Color</h3>
+    <p>CSS memperlakukan setiap eleme HTML seperti berada pada sebuah kota (kita akan tahu tentang ini pada pembahasan box model) dan properti <strong>background-color</strong> dapat mengatur warna untuk 
+        background dari kotak tersebut.</p>
+    <p>Sama seperti <em>text color</em>, kita dapat menspesifikasikan warna yang dipilih dari <em>numeric values</em> atau dengan <em>predefined color name.</em> Properti background-color akan bernilai 
+        transparan jika tidak kita tetapkan</p>
+    <p>Kebanyakan browser menetapkan nilai putih dalam nilai background-color, tetapi nilai tersrbut dapat pengguna ubah memalui pengaturan browser-nya. Jadi, untuk memastikan website kita memiliki tampilan 
+        background putih, kita dapat terapkan nilai <strong>background-color: white;</strong> pada elemen body. Kita juga bisa menetapkan pedding ketika menetapkan background-color untuk memberikan jarak 
+        antara konten dan pinggiran kotak elemen</p>
+    <img src="img-css/page-14-4.png" alt="">
+    <img src="img-css/page-14-5.png" alt="">
+    <h3>Opacity</h3>
+    <p>Apakah Anda pernah melihat suatu objek atau gambar yang tak terlihat atau tembus pandang? Pada dunia nyata, Anda dapat menemukan objek yang memiliki sifat tersebut. Contohnya adalah plastik mika. Jika 
+        mengingat tugas makalah di sekolah, biasanya plastik mika dibutuhkan sebagai sampulnya. Kita lebih fokus untuk berbicara tentang bahannya yang terlihat transparan.</p>
+    <p>Kertas tersebut memiliki tingkat opacity tertentu. Bayangkan ia adalah sebuah elemen HTML. Satu lembar mika akan memiliki tingkat opacity lebih kecil sehingga transparansinya semakin tinggi. nilah konsep 
+        dari opacity. Makin tinggi tingkat atau nilai opacity maka makin besar kemungkinan elemen HTML akan terlihat.</p>
+    <p>Mungkin sebagian dari Anda ada yang bertanya, “Apa perbedaan antara transparan dan opacity?” Jawabannya, transparan adalah seberapa besar tingkat tembus pandang atau tak terlihatnya suatu objek, sedangkan 
+        opacity adalah seberapa besar tingkat terlihat suatu objek. Semakin besar tingkat transparansi suatu objek, semakin tak terlihat objek tersebut. Namun, semakin besar tingkat opacity suatu objek, semakin 
+        terlihat objek tersebut (solid).</p>
+    <img src="img-css/page-14-6.png" alt="">
+    <p>Berikut adalah contoh penerapan opacity pada CSS.</p>
+    <img src="img-css/page-14-7.png" alt="">
+    <img src="img-css/page-14-8.png" alt="">
+    <h3>Opacity pada Warna</h3>
+    <p>Sebenarnya, opacity akan memberikan efek transparansi pada keseluruhan elemen, termasuk konten maupun child element di dalamnya. Ada kalanya, kita hanya ingin menerapkan opacity pada warnanya saja tanpa 
+        memberikan efek pada keseluruhan elemen.</p>
+    <p>Selain komponen warna-warna, CSS memiliki fitur bernama opacity yang dapat ditetapkan dalam warna. Ini merupakan komponen keempat setelah red, blue, dan green. Biasanya, ia disebut sebagai alpha channel. 
+        Untuk melakukannya, kita bisa menggunakan format warna RGBA, HSLA, dan Hex.</p>
+    <p>Berikut contoh penerapan alpha channel pada warna</p>
+    <img src="img-css/page-14-9.png" alt="">
+    <img src="img-css/page-14-10.png" alt="">
 
 
 </body>
