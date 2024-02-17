@@ -405,8 +405,101 @@
     <p>Berikut contoh penerapan alpha channel pada warna</p>
     <img src="img-css/page-14-9.png" alt="">
     <img src="img-css/page-14-10.png" alt="">
+    <h3>Box Model</h3>
+    <p>Pada pembahasan <em>background-color</em> disinggung bahwa setiap elemen ditampilkan seperti sebuah <em>boxes</em> atau kotak. Setiap elemen yang dibuat pada HTML akan menciptakan sebuah kotak untuk menampung 
+        kontennya. Layaknya bentuk kotak pada umumnya, ada beberapa nilai atau komponen padanya.</p>
+    <ul>
+        <li>
+            Lebar dan tinggi pada kotak (konten)
+        </li>
+        <li>
+            Ruang kosong antara konten dengan border (padding).
+        </li>
+        <li>
+            Garis tepi (border).
+        </li>
+        <li>
+            Jarak dari elemen lain(margin).
+        </li>
+    </ul>
+    <p>Pada CSS, kita dapat mengatur nilai-nilai tersebut. Inilah yang disebut dengan box model.</p>
+    <h3>Apa itu Box ELement</h3>
+    <img src="img-css/page-15-1.png" alt="">
+    <p>Sebagaimana yang kita lihat pada gambar diatas, setiap elemen pada HTML, baik <em>block-level</em> maupun inline-level, akan menghasilkan kotak elemen. Gambar di atas adalah website milik <a href="https://www.dicoding.com/">dicoding.com</a> 
+        dengan menerapkan CSS berikut.</p>
+    <img src="img-css/page-15-2.png" alt="">
+    <p>Perhatikan ilustrasi dibawah ini.</p>
+    <img src="img-css/page-15-3.png" alt="">
+    <p>Berikut adalah penjelasan dari gambar diatas.</p>
+    <ul>
+        <li>Content</li>
+        <p>Content merupakan sebuah ini dari kotak elemen yang merupakan konten dari elemen itu sendiri.</p>
 
+        <li>Padding</li>
+        <p>Area yang menjadi jarak antara border elemen dengan konten yang ditampilkan. Ketika kita menerapkan <em>background-color</em>, warna tersebut diterapkan pada area padding. Penerapan ukuran padding pada elemen 
+            adalah opsional</p>
 
+        <li>Border</li>
+        <p>Border merupakan garis yang mencakup konten beserta padding. Penerapan border pada elemen adalah opsional</p>
+
+        <li>Margin</li>
+        <p>Berbeda dengan padding, margin merupakan area jarak diluar border. Pada ilustrasi di atas, margin ditunjukkan dengan warna merah muda. Namun, pada aslinya margin selalu transparan dan penerapan margin pada elemen 
+            adalah opsional</p>
+
+        <li>Edge of Element</li>
+        <p>Edge of Element merupakan batas dari suatu elemen. Di dalamnya terdapat margin, border, padding, dan konten. Pada ilustrasi di atas, batas elemen ditunjukkan pada garis putus, tetapi pada aslinya batas elemen selalu 
+            tidak terlihat</p>
+    </ul>
+    <h3>Dimension</h3>
+    <p>Standarnya, sebuah box yang dihasilkan tiap elemen selalu cukup untuk menampung konten. Namun, kita dapat mengatur nilai dimensi dari box tersebut dengan properti <strong>width</strong> dan <strong>height</strong>.</p>
+    <p>Cara yang paling banyak digunakan dalam menentukan dimensi kotak adalah menggunakan piksel, persentase atau ems. Secara tradisional, piksel merupakan cara yang paling populer karena kita dapat merancang dan mengontrol 
+        ukuran secara akurat</p>
+    <p>Berbeda ketika kita menggunakan persentase, ukuran kotak akan relatif atau menyesuaikan dari ukuran lain, seperti ukuran jendela browser atau ukuran induk yang menaunginnya. Namun, ketika menggunakan ems, nilai dimensi 
+        kotak akan menyesuaikan berdasarkan ukuran teks yang ditampilkan pada konten.</p>
+    <p>Pada saat ini, banyak developer mulai merancang menggunakan persentase dan ems untuk menetapkan ukuran box agar dapat menyesuaikan dengan berbagai macam ukuran layar.</p>
+    <img src="img-css/page-15-4.png" alt="">
+    <img src="img-css/page-15-5.png" alt="">
+    <p>Pada contoh diatas, kita dapat melihat elemen <code>div</code> memiliki dimensi elemen dengan lebar 300px dan tinggi 100px. Didalamnya terdapat elemen <em>p</em> yang memiliki ukuran elemen 75% dari lebar dan tinggi elemen 
+        induknya. Dengan demikian, elemen <code>p</code> memiliki ukuran 225px untuk panjanng dan lebarnya.</p>
+    <h3>Limiting Dimension</h3>
+    <p>Beberapa website yang ada sekarang menampilkan layout yang dapat melebar dan menyempit mengikuti ukuran layar pengguna. Pada prinsip tampilan tersebut, mungkin kita memerlukan sebuah limitasi ukuran yang harus ditetapkan 
+        agar konten selalu ditampilkan secara proporsional. Untuk melakukannya kita memanfaatkan properti <strong>min-width</strong> dan <strong>max-width</strong>.</p>
+    <ul>
+        <li><strong>min-width</strong>: menetapkan nilai lebar minimal yang harus dimiliki elemen.</li>
+        <li><strong>max-width</strong>: menetapkan nilai lebar maksimal yang harus dimiliki elemen.</li>
+    </ul>
+    <p>Keduanya merupakan properti yang sangat membantu untuk memastikan konten halaman dapat terbaca oleh pengguna (terutama ketika pengguna menggukanan ponsel). Misalnya, kita dapat menggunakan properti max-width untuk memastikan 
+        bahwa baris text yang muncul tidak terlalu lebar</p>
+    <img src="img-css/page-15-6.png" alt="">
+    <img src="img-css/page-15-7.png" alt="">
+    <h3>Overflowing Content</h3>
+    <p>Dimensi box yang dihasilkan elemen selalu cukup untuk menampung konten, tetapi hal ini tidak berlaku jika kita ditetapkan secara manual panjang dan lebarnya. Tak jarang terjadi <em>overflow</em> ketika kita menerapkan ukuran 
+        pada elemen dengan konten di dalamnya yang begitu banyak. Contohnya seperti berikut.</p>
+    <img src="img-css/page-15-8.png" alt="">
+    <img src="img-css/page-15-9.png" alt="">
+    <p>Untuk menangani kasus seperti ini kita bisa gunakan properti overflow, properti ini dapat bernilai berikut.</p>
+    <ul>
+        <li><strong>visible</strong></li>
+        <p>Visible merupakan nilai default pada properti ini. Konten yang tidak tertampung (overflow) akan tetap ditampilkan seperti pada standarnya.</p>
+
+        <li><strong>hidden</strong></li>
+        <p>Jika terjadi overflow, konten yang tidak tertampung akan disembunyikan</p>
+
+        <li><strong>scroll</strong></li>
+        <p>Memunculkan scroll bar pada pinggir elemen sehingga konten yang tidak tertampung akan ditampilkan dengan scroll bar. Jika menggunakan nilai ini, scroll bar akan tetap muncul walaupun konten tidak terjadi <em>overflow</em></p>
+
+        <li><strong>auto</strong></li>
+        <p>Sama seperti scroll, hanya jika tidak terjadi overflow, nilai visible yang akan diterapkan.</p>
+    </ul>
+    <p>Berikut adalah contoh penerapan seluruh nilai properti ini.</p>
+    <img src="img-css/page-15-10.png" alt="">
+    <h3>Box-Sizing</h3>
+    <p>Sebelum CSS3, ukuran lebar dan panjang elemen mengacu pada konten elemen (content-box). Itu berarti ukuran elemen seluruhnya merupakan nilai panjang (width) dan lebar (height) yang kita spesifikasikan ditambah dengan nilai padding dan 
+        border yang diterapkan pada elemen. Hal tersebut membuat sebagian developer menjadi sulit dalam menetapkan ukuran dimensi.</p>
+    <p>Pada CSS3, kita dapat memilih tipe pengukuran lain dalam menentukan dimensi elemen. Dengan menggunakan properi box-sizing, kita dapat menentukannya berdasarkan border box. Ukuran elemen sudah termasuk content, padding, dan border. Dengan 
+        metode ini, hasil elemen yang ditampilkan (termasuk padding dan border) akan memiliki dimensi yang sama persis seperti yang kita tentukan.</p>
+    <img src="img-css/page-15-11.png" alt="">
+    <img src="img-css/page-15-12.png" alt="">
+    
 </body>
 </html>
-

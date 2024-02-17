@@ -438,5 +438,99 @@
             Folder styles dan berkas styles.css sudah siap untuk dimanfaatkan. Kita akan menggunakan berkas ini untuk styling proyek Halaman Profil.
         </li>
     </ol>
+    <h2>Latihan Menulis Rules pada Berkas CSS</h2>
+    <ol>
+        <li>
+            Silahkan buka proyek Halaman Profil terakhir dengan VS Code.
+        </li>
+        <li>
+            Untuk latihan awal, kita akan menuliskan rule styling pada beberapa elemen HTML yang tersedia dalam Halaman Profil. Kita akan mengubah tipe font. Tetapkan tipe font 'sans-serif' sebagai font yang digunakan.
+            <!-- 
+                body {
+                    font-family: sans-serif;
+                }
+             -->
+        </li>
+        <li>
+            Untuk styling kedua, kita menetapkan juga warna pada setiap elemen <code>h2</code> dan <code>h3</code> dengan menuliskan kode berikut.
+            <!-- 
+                body {
+                    font-family: sans-serif;
+                }   
+                h2 {
+                    color: #00a2c6;
+                }    
+                h3 {
+                    color: #00a2c6;
+                }
+             -->
+        </li>
+        <li>
+            Styling terakhir adalah memberikan warna background, warna teks, dan padding pada elemen <code>footer</code>. Silahkan tambahkan kode berikut.
+            <!-- 
+                footer {
+                    padding: 20px;
+                    color: white;
+                    background-color: #00a2c6;
+                }
+             -->
+        </li>
+        <li>
+            Akhir dari keseluruhan kode pada berkas style.css akan tampak seperti berikut.
+            <!-- 
+                body {
+                    font-family: sans-serif;
+                }    
+                h2, h3 {
+                    color: #00a2c6;
+                }   
+                footer {
+                    padding: 20px;
+                    color: white;
+                    background-color: #00a2c6;
+                }
+             -->
+        </li>
+        <h2>Mwnghubungkan Berkas CSS dengan Halaman Profil.</h2>
+        <ol>
+            <li>
+                Silahkan buka proyek Halaman Profil terakhir dengan VS Code.
+            </li>
+            <li>
+                Setelah menuliskan rules pada berkas style.css, langkah selanjutnya adalah menghubungkan berkas style.css
+            </li>
+            <li>
+                Silahkan buka kembali berkas index.html, kemudian ditambahkan kode berikut pada elemen <code>head</code>
+                <!--  
+                    <link rel="stylesheet" href="assets/styles/style.css">
+                -->
+            </li>
+            <li>
+                Jadi, keseluruhan kode pada elemen head akan tampak seperti berikut.
+                <!-- 
+                    <head>
+                    <meta charset="utf-8" />
+                    <title>Kota Bandung</title>
+                    
+                    My Own Styles 
+                    <link rel="stylesheet" href="assets/styles/style.css">
+                    </head>
+                 -->
+            </li>
+            <li>
+                Simpan perubahan pada berkas index.html dan buka berkas tersebut pada browser. Jika kita berhasil menerapkan styling pada berkas HTML, browser akan tampak berbeda dari sebelumnya.
+            </li>
+            <li>
+                Perubahan pertama terjadi pada tipe font yang ditampilkan pada seluruh konten dalam elemen body.
+            </li>
+            <li>
+                Perubahan lainnya ada dalam elemen <code>h2</code> dan <code>h3</code> dengan perubahan warna pada teksnya.
+            </li>
+            <li>
+                Perubahan terakhir terjadi pada elemen <code>footer</code> yang berada di bawah halaman. Elemen ini akan menerapkan warna background berwarna biru, teks berwarna putih, dan padding pada box model.
+            </li>
+
+        </ol>
+    </ol>
 </body>
 </html>
