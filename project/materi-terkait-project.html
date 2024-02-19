@@ -491,46 +491,171 @@
                 }
              -->
         </li>
-        <h2>Mwnghubungkan Berkas CSS dengan Halaman Profil.</h2>
-        <ol>
+    </ol>
+    <h2>Mwnghubungkan Berkas CSS dengan Halaman Profil.</h2>
+    <ol>
+        <li>
+            Silahkan buka proyek Halaman Profil terakhir dengan VS Code.
+        </li>
             <li>
-                Silahkan buka proyek Halaman Profil terakhir dengan VS Code.
-            </li>
-            <li>
-                Setelah menuliskan rules pada berkas style.css, langkah selanjutnya adalah menghubungkan berkas style.css
-            </li>
-            <li>
-                Silahkan buka kembali berkas index.html, kemudian ditambahkan kode berikut pada elemen <code>head</code>
-                <!--  
-                    <link rel="stylesheet" href="assets/styles/style.css">
-                -->
-            </li>
-            <li>
-                Jadi, keseluruhan kode pada elemen head akan tampak seperti berikut.
-                <!-- 
-                    <head>
+            Setelah menuliskan rules pada berkas style.css, langkah selanjutnya adalah menghubungkan berkas style.css
+        </li>
+        <li>
+            Silahkan buka kembali berkas index.html, kemudian ditambahkan kode berikut pada elemen <code>head</code>
+            <!--  
+                <link rel="stylesheet" href="assets/styles/style.css">
+            -->
+        </li>
+        <li>
+            Jadi, keseluruhan kode pada elemen head akan tampak seperti berikut.
+            <!-- 
+                <head>
+                <meta charset="utf-8" />
+                <title>Kota Bandung</title>
+                
+                My Own Styles 
+                <link rel="stylesheet" href="assets/styles/style.css">
+                </head>
+             -->
+        </li>
+        <li>
+            Simpan perubahan pada berkas index.html dan buka berkas tersebut pada browser. Jika kita berhasil menerapkan styling pada berkas HTML, browser akan tampak berbeda dari sebelumnya.
+        </li>
+        <li>
+            Perubahan pertama terjadi pada tipe font yang ditampilkan pada seluruh konten dalam elemen body.
+        </li>
+        <li>
+            Perubahan lainnya ada dalam elemen <code>h2</code> dan <code>h3</code> dengan perubahan warna pada teksnya.
+        </li>
+        <li>
+            Perubahan terakhir terjadi pada elemen <code>footer</code> yang berada di bawah halaman. Elemen ini akan menerapkan warna background berwarna biru, teks berwarna putih, dan padding pada box model.
+        </li>
+    </ol>
+    <h2>Latihan Menggunakan Font dari Google Fonts</h2>
+    <ol>
+        <li>
+            Silahkan buka proyek Halaman Profil terakhir dengan VS Code.
+        </li>
+        <li>
+            Untuk menggunakan font yang disediakan Google Fonts, silahkan kunjungi website Google Fonts pada <a href="https://fonts.google.com/">fonts.google.com</a>
+        </li>
+        <li>
+            Saat ini, kita akan mencari font dengan nama "<strong>Quicksand</strong>", lakukan pencarian font tersebut pada search bar yang tersedia pada wensite.
+        </li>
+        <li>
+            Jika sudah menemukan font yang dicari, tekan tombol card(kartu) dari font tersebut. Anda akan diarahkan ke halaman baru. Jika halaman digulir (scroll ke bawah), Anda akan melihat beberapa tingkatan style dari font ini.
+        </li>
+        <li>
+            Kali ini, kita akan mengguanakan Quicksand dengan tingkat ketebalan 400 (reguler) dan 700 (bold). Untuk memilih font tersebut, silahkan tekan tombol "+" sehingga Google Fonts akan menyimpannya sebagai Selected Families-ini seperti fitur cart pada online shop.
+        </li>
+        <li>
+            Setelah selesai memilih font yang dicari, perhatikan di bagian "Use on the web" pada sidebar bernama Selected Family. Pada bagian tersebut, kita diperlihatkan dua cara untuk menghubungkan font family yang dipilih pada halaman web dan cara menyetel font ini pada CSS rules.
+        </li>
+        <li>
+            Kali ini, kita akan menggunakan cara <code>link</code>. Sehingga lakukan copy dengan cara blok seluruh kodenya dan klik kanan lalu copy atau klik tombol tumpukan kertas pada pojok kanan bawah kotak abu-abu. Jika sudah, silahkan lakukan paste dalam elemen <code>head</code> pada index.html. Berikut adalah kesulurhan dalam elemen <code>head</code>.
+            <!-- 
+                <head>
                     <meta charset="utf-8" />
-                    <title>Kota Bandung</title>
+                    <title>Halaman Profil Bandung</title>
                     
                     My Own Styles 
-                    <link rel="stylesheet" href="assets/styles/style.css">
-                    </head>
-                 -->
-            </li>
-            <li>
-                Simpan perubahan pada berkas index.html dan buka berkas tersebut pada browser. Jika kita berhasil menerapkan styling pada berkas HTML, browser akan tampak berbeda dari sebelumnya.
-            </li>
-            <li>
-                Perubahan pertama terjadi pada tipe font yang ditampilkan pada seluruh konten dalam elemen body.
-            </li>
-            <li>
-                Perubahan lainnya ada dalam elemen <code>h2</code> dan <code>h3</code> dengan perubahan warna pada teksnya.
-            </li>
-            <li>
-                Perubahan terakhir terjadi pada elemen <code>footer</code> yang berada di bawah halaman. Elemen ini akan menerapkan warna background berwarna biru, teks berwarna putih, dan padding pada box model.
-            </li>
+                    <link rel="stylesheet" href="assets/styles/style.css" />
+                    
+                    Google Fonts 
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+                        rel="stylesheet"/>
+                </head>
+             -->
+        </li>
+        <li>
+            Mantap! Sekarang, font Quicksand sudah terpasang pada dokumen HTML dan kita dapat memanfaatkannya pada CSS. Silahkan buka berkas style.css dan kita ubah nilai properti font-family pada body dengan menambahkan nilai 'Quicksand' sebelum <em>generic font</em> sans-serif.
+            <!-- 
+                body {
+                    font-family: 'Quicksand', sans-serif;
+                }
+             -->
+        </li>
+        <li>
+            Dengan demikian, tampilan font pada halaman web akan menggunakan Quicksand.
+        </li>
+    </ol>
+    <h2>Latihan Menetapkan Ukuran, Ketebalan, dan Aligment Teks di Halaman Profil</h2>
+    <ol>
+        <li>
+            Silahkan buka proyek Halaman Profil terakhir dengan VS Code
+        </li>
+        <li>
+            Latihan pertama adalah mengatur ukuran font menjadi 18px pada navigation list(<code>nav</code>). Silahkan tambahkan kode bercetak tebal berikut pada style.css.
+            <!-- 
+                nav a {
+                    font-size: 18px;
+                }
+             -->
+        </li>
+        <li>
+            Setelah ukuran, kita atur ketebalan menjadi 400 dan hilangkan underline (garis bawah) pada elemen tersebut sehingga isi block rulenya menjadi seperti berikut.
+            <!-- 
+                nav a {
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-decoration: none;
+                }
+             -->
+        </li>
+        <li>
+            Seharusnya sekarang ukuran teks pada daftar navigasi akan tampak lebih besar dan tidak memiliki garis bawah.
+        </li>
+        <li>
+            Namun, ada yang kita bisa tingkatkan dari styling ini. Bagaimana jika kita mengubah style-nya jika elemen tersebut disorot dengan kursor? Kita bisa memberikan efek tebal pada teks ketika hal tersebut terjadi.
+            Kita akan memanfaatkan <strong>pseudo-class</strong> <code>:hover</code> pada elemen <em>a</em>. Silahkan tambahkan kode bercetak tebal berikut.
+            <!-- 
+                nav a:hover {
+                    font-weight: bold;
+                }
+             -->
+        </li>
+        <li>
+            Nah, kita sudah selesai dengan daftar navigasi. Selanjutnya, kita akan membuat teks pada elemen <code>header</code> dalam elemen samping <code>aside</code> menjadi rata tengah. Kita kana memanfaatkan properti text-align. Namun, sebelum itu, untuk memudahkan proses styling, kita akan memberikan atribut class pada elemen <code>article</code> dengan nilai "profile".
+            <!-- 
+                <aside>
+                    <article class="profile">
+                        <header>
+                            Kode lainnya disembunyikan... 
+                        </header>
+                        <section>
+                            Kode lainnya disembunyikan... 
+                        </section>
+                    </article>
+                </aside>
+             -->
+        </li>
+        <li>
+            Setalah itu, kita dapat menentukan selector dengan mudah untuk mengatur <code>header</code>. Silahkan tambahkan kode berikut pada berkas style.css.
+            <!-- 
+                .profile header {
+                    text-align: center;
+                }
+             -->
+        </li>
+        <li>
+            Sampai langkah ini seharusnya, tampilan elemen <code>hader</code> pada konten samping akan tertata menjadi rata tengah.
+        </li>
+        <li>
+            Terakhir kita buat juga teks pada <code>footer</code> menjadi rata tengah dan tebal dengan menambahkan properti <strong>text-align: center</strong> dan <strong>font-weight: bold</strong> pada footer selector. Berikut adalah keseluruhan isi dari berkas style.css. 
+            <!-- 
+                footer {
+                    padding: 20px;
+                    color: white;
+                    background-color: #00a2c6;
+                    text-align: center;
+                    font-weight: bold;
+                }
+             -->
+        </li>
 
-        </ol>
     </ol>
 </body>
 </html>
