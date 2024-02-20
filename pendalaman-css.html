@@ -635,6 +635,54 @@
     <img src="img-css-2/page-19-4.png" alt="">
     <p>Hasilnya seperti berikut ini.</p>
     <img src="img-css-2/page-19-5.png" alt="">
+    <h3>Positioning</h3>
+    <p>Kita sudah mengetahui cara mengubah posisi dari sebuah elemen dengan menggunakan margin. Namun, ketika melakulannya akan berpengaruh terhadap posisi elemen lain di sekitarnya. Lantas bagaimana jika kita ingin 
+        memindahkan tanpa mengganggu posisi elemen lainnya? Solusinya kita perlu mengubah <em>positioning schema</em> dengan menggunakan properti <strong>position</strong> dalam mengontrol letak elemen tersebut. Berikut 
+        adalah nilai dari properti <strong>position</strong> yang ada pada CSS</p>
+    <ul>
+        <li><strong>Normal Flow/Static Flow</strong></li>
+        <p>Ia adalah <em>default behavior</em> yang dimiliki elemen, yakni setiap elemen block akan ditampilkan dalam baris baru ketika dibuat. Jadi, setiap elemen block selalu muncul di bawah dari elemen block sebelumnya. 
+            Bahkan, jika masih terdapat ruang kosong pada samping elemenya, mereka tidak akan tampak bersebelahan</p>
+        
+        <li><strong>Relative Positioning</strong></li>
+        <p>Membuat elemen dapat melakukan perpindahan posisi ke atas, kanan, bawah, ataupun kiri dari posisi semula atau posisi seharusnya elemen tersebut berada. Perpindahan posisi ini tidak akan berpengaruh terhadap posisi 
+            elemen di sekitarnya karena ketika menggunakan <em>relative positioning</em> elemen tersebut akan dipindahkan dari <em>normal flow</em></p>
+        
+        <li><strong>Absolute Positioning</strong></li>
+        <p>Sama seperti relative, elemen akan dipindahkan keluar dari <em>normal flow</em> sehingga kita dapat memindahkan posisi elemen ke atas, kanan, bawah, ataupun kiri secara leluasa tanpa mengganggu elemen disekitanya. 
+            Namun, posisinya relatif terhadap jendela browser dan posisinya dapat relatif pada induk elemen selama induk elemen juga berada di luar dari normal flow.</p>
+
+        <li><strong>Fixed Positioning</strong></li>
+        <p>Ia merupakan <em>absolute position. Namun, posisinya selalu relatif pada jendela browser, bahkan ketika pengguna melakukan scrolling posisinya akan tetap tampak pada posisinya di layar.</em></p>
+    </ul>
+    <p>Sebelum kita membahas satu per satu skema tersebut, mungkin kita perlu memahami lebih detail lagi perngertian sebenarnya <em>normal flow</em> atau biasa disebut dengan <em>static flow</em> itu, dan alasan untuk memindahkan 
+        posisi elemen kita perli mengeluarkannya dari <em>static flow</em></p>
+    <h3>Perbedaan Static Flow dan Non-Static Flow</h3>
+    <p>Sebenarnya CSS memiliki dua buah <em>flow</em> yang bisa digunakan untuk menampilkan elemen, yakni <em>static</em> dan <em>non-static</em>. Untuk mudah memahami perbedaan keduanya, kita gambarkan sebuah halaman website dengan
+        tampilan tiga dimensi. Bayangkan kita memiliki tua buah elemen <code>div</code> berukuran 200px X 200px yang masing-masingnya memiliki warna berbeda.</p>
+    <img src="img-css-2/page-20-1.png" alt="">
+    <p>Sebab kita tidak mengatur properti position dari ketiga elemen tersebut, tiap elemen akan ditampilkan dengan <em>static flow</em> seperti berikut.</p>
+    <img src="img-css-2/page-20-2.png" alt="">
+    <p>Ketika ingin mengubah letak kitak biru (kotak kedua) dengan menggunakan <strong>margin-top: 20px</strong>, tentu akan berpengarih pada posisi elemen dibawahnya</p>
+    <img src="img-css-2/page-20-3.png" alt="">
+    <p>Berikut hasil representasinya.</p>
+    <img src="img-css-2/page-20-4.png" alt="">
+    <p>pada ilustrasi di atas, kita bisa lihat bahwa kotak yang berwarna oranye ikut bergeser ke bawah. Berbeda ketika kita menerapkan properti <strong>position</strong> yang dapat membuat elemen keluar dari <em>static flow</em>. 
+        Contohnya, kita menerapkan properti <strong>position</strong> dengan nilai <strong>relative</strong>.</p>
+    <img src="img-css-2/page-20-5.png" alt="">
+    <p>Berikut hasil representasinya.</p>
+    <img src="img-css-2/page-20-6.png" alt="">
+    <p>Dalam tampilan browser mungkin tidak terdapat perbedaan apapun setelah menerapkan nilai static pada atribut position. Namun, sebenarnya elemen yang menerapkannya akan diangkat dari luar <em>statis flow</em> seperti yang 
+        ditampilkan pada ilustrasi 3D. Jadi, elemen tersebut dapat leluasa berpindah posisi tanpa memengaruhi elemen yang berada pada <em>static flow</em></p>
+    <p>Untuk mengubah posisi elemen yang berada di <em>non-static flow</em>, kita dapat menggunakan properti <strong>top, right, bottom,</strong> ataupun <strong>left</strong>.</p>
+    <img src="img-css-2/page-20-7.png" alt="">
+    <p>Berikut hasil representasinya.</p>
+    <img src="img-css-2/page-20-8.png" alt="">
+    <p>Perlu diingat bahwa properti <strong>top, right, bottom,</strong> ataupun <strong>left</strong> hanya akan berpengaruh pada elemen yang menerapkan <em>non-static flow</em>, yaitu elemen yang menerapkan nilai relative, 
+        absolute, dan fixed pada properti <strong>position</strong></p>
+    
+
+
     
 </body>
 </html>
