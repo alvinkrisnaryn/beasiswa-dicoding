@@ -679,7 +679,80 @@
     <p>Berikut hasil representasinya.</p>
     <img src="img-css-2/page-20-8.png" alt="">
     <p>Perlu diingat bahwa properti <strong>top, right, bottom,</strong> ataupun <strong>left</strong> hanya akan berpengaruh pada elemen yang menerapkan <em>non-static flow</em>, yaitu elemen yang menerapkan nilai relative, 
-        absolute, dan fixed pada properti <strong>position</strong></p>
+        absolute, dan fixed pada properti <strong>position</strong><clear/p>
+    <h3>Positioning: Normal Flow</h3>
+    <p>Dalam flow normal, setiap elemen block ditempatkan di bawah elemen sebelumnya. Sebab ini merupakan secara standar browser memperlakukan elemen HTML, kita tidak perlu menetapkan nilai properti position ketika ingin 
+        membuat perilaku seperti ini. Namun, secara sintaks perilaku ini ditetapkan dengan nilai <strong>statis</strong>.</p>
+    <img src="img-css-2/page-21-1.png" alt="">
+    <img src="img-css-2/page-21-2.png" alt="">
+    <p>Pada contoh di atas, kita tidak menetapkan nilai lebar pada elemen heading, tetapi kita dapat lihat bahwa elemen heading tersebut mencakup seluruh lebar ruang yang ada pada jendela browser.</p>
+    <p>Elemen paragraf kita atur lebarnya dengan nilai 450px sehingga elemen tersebut tidak mencakup seluruh lebar ruang yang ada. Walaupun demikian, elemen paragraf selanjutnya tetap ditampilkan di bawahnya meskipun masih 
+        terdapat ruang yang cukup disampingnya. Hal tersebut merupakan contoh dari gambaran bagaimana <em>flow normal</em>bekerja.</p>
+    <h3>Positioning: Relative Positioning</h3>
+    <p>Sebagaimana kita ketahui sebelumnya, dengan menetapkan relative pada properti <strong>position</strong>, kita dapat melakukan perpindahan posisi elemen ke atas, kanan, bawah, atapun kiri. Perpindahan posisi yang dilakukan 
+        tidak akan berpengaruh terhadap posisi elemen di sekitarnya. Hal ini karena ketika menggunakan <em>relative positioning</em> elemen tersebut akan dipindahkan dari <em>normal flow</em>. Untuk menggunakan relative 
+        positioning, kita tetapkan nilai relative pada properti position</p>
+    <img src="img-css-2/page-21-3.png" alt="">
+    <img src="img-css-2/page-21-4.png" alt="">
+    <p>Pada contoh di atas, setelah menetapkan nilai position pada paragraf kedua, kita mengubah posisinya menjadi 10 piksel lebih bawah dan 100 piksel lebih ke kanan dari posisi yang seharusnya. Perlu kita ingat bahwa perpindahan 
+        posisi mengacu pada posisi elemen seharusnya</p>
+    <h3>Positioning: Absolute Positioning</h3>
+    <p>Ketika properti <strong>position</strong> diberikan nilai <strong>absolute</strong>, ia akan berperlilaku sama dengan relative. Elemen akan dikeluarkan dari normal flow sehingga jika dipindahkan posisinya tidak akan berpengaruh
+        pada elemen lain disekitarnya.</p>
+    <p>Namun, hal yang membedakannya adalah elemen ini benar-benar tidak dianggap ada oleh elemen yang berada pada normal flow. Dampaknya, lokasi awal elemen yang diberikan nilai <strong>absolute</strong> akan ditempati oleh elemen 
+        dibawahnya.</p>
+    <img src="img-css-2/page-21-5.png" alt="">
+    <img src="img-css-2/page-21-6.png" alt="">
+    <p>Pada contoh di atas, kita bisa lihat bahwa ketika elemen heading menerapkan properti position dengan nilai absolute, elemen di bawahnya (paragraf) akan menempati posisi yang sebelumnya ditempati oleh elemen heading tersebut. 
+        Selain itu, perpindahan posisi ketika menggunakan absolute akan relatif pada jendela browser.</p>
+    <p>Kita bisa lihat pada hasil di atas bahwa elemen heading bergesar 500px dari kiri. Namun, selain relatif terhadap jendela browser, nilai ini juga dapat relatif pada elemen yang menaunginya (elemen induk) selama elemen tersebut 
+        juga berada di luar normal flow. Jika tidak, elemen akan tidak menghiraukan elemen induknya tersebut. Contohnya seperti kode berikut.</p>
+    <img src="img-css-2/page-21-7.png" alt="">
+    <img src="img-css-2/page-21-8.png" alt="">
+    <p>Pada contoh kode di atas, bisa dilihat bahwa kita tidak menetapkan properti position pada elemen <strong>.parent</strong> sehingga elemen tersebut tetap berada pada flow normal. Jadi, elemen heading akan mengabaikan elemen induknya.</p>
+    <p>Berbeda ketika <strong>.parent</strong> menerapkan properti <strong>position</strong> dengan nilai yang dapat mengeluarkannya dari normal flow. Contohnya, nilai <strong>relative</strong>. Dengan demikian, posisi elemen heading 
+        akan relatif terhadap <strong>.parent</strong> (ketika jendela browser dikecilkan properti position pada elemen <strong>.parent</strong> tidak akan berubah).</p>
+    <img src="img-css-2/page-21-9.png" alt="">
+    <h3>Positioning: Fixed Positioning</h3>
+    <p>Fixed positioning merupakan absolute position. Namun, posisinya selalu relatif pada jendela browser (meskipun diletakkan dalam induk elemen diluar flow normal). Bahkan, ketika pengguna melakukan scrolling, posisinya akan tetap 
+        tampak pada posisinya di layar.</p>
+    <img src="img-css-2/page-21-10.png" alt="">
+    <img src="img-css-2/page-21-11.png" alt="">
+    <p>Pada contoh di atas, elemen heading diposisikan di sudut kiri atas jendela browser dengan properti berikut.</p>
+    <img src="img-css-2/page-21-12.png" alt="">
+    <p>Ketika pengguna melakukan scrolling pada halaman, elemen heading tetap berada pada posisi yang sama dan paragraf yang ditampilkan tampak di belakang elemen heading tersebut.</p>
+    <h3>Floating</h3>
+    <p>Secara sederhananya, properti float dapat membantu elemen berada pada sebelah kanan atau kiri. Bahkan, jika diterapkan pada elemen inline memungkinkan elemen disekitarnya mengelilingi elemen tersebut (wrap).</p>
+    <img src="img-css-2/page-22-1.png" alt="">
+    <img src="img-css-2/page-22-2.png" alt="">
+    <p>Selain dalam membuat text wrapping, float juga merupakan salah satu teknik dalam membuat layout website. Teknik ini masih banyak digunakan oleh developer karena sangat mudah dipahami dan tergolong mudah untuk <em>multiple column</em> 
+        seperti gambar berikut.</p>
+    <img src="img-css-2/page-22-3.png" alt="">
+    <p>Hal ini dapat dilakukan dengan mudah menggunakan properti <strong>float</strong> karena nilai dari properti ini adalah <strong>left</strong> dan <strong>right</strong>. Nilai tersebut menunjukkan posisi elemen harus diletakkan. 
+        Contoh penerapannya seperti berikut.</p>
+    <img src="img-css-2/page-22-4.png" alt="">
+    <img src="img-css-2/page-22-5.png" alt="">
+    <img src="img-css-2/page-22-6.png" alt="">
+    <p>Pada contoh di atas, kita bisa melihat pada selector <strong>.left-content</strong> dan <strong>.right-content</strong> ditetapkan properti float dengan nilai <strong>left</strong> dan <strong>right</strong> sehingga elemen tersebut 
+        dapat diposisikan secara bersebelahan.</p>
+    <p>Ketika menggunakan properti float, jangan lupa untuk menentukan lebar dari propertinya karena nilai dari lebar menentukan seberapa banyak ruang yang cukup oleh elemen. Pada contoh di atas, kita menetapkan nilai 30% untuk konten kiri dan 
+        70% untuk konten kanan.</p>
+    <p>Lantas, jika nilainya hanya left dan right, bagaimana apabila terdapat lebih dari dua kolom dalam menyusun layout? Hal tersebut sangat mudah dilakukan, kita hanya perlu menetapkan nilai left pada ketiga kolomnya, dengan demikian maka kolom 
+        akan tampil bersebelahan sesuai urutan penulisan elemennya</p>
+    <img src="img-css-2/page-22-7.png" alt="">
+    <img src="img-css-2/page-22-8.png" alt="">
+    <img src="img-css-2/page-22-9.png" alt="">
+    <h3>Permasalahan Penerapan Float</h3>
+    <p>Properti float terlihat sangat mudah untuk digunakan, baik dalam <em>text wrapping</em> maupun dalam penyusunan layout. Namun, bukan berarti ketika menggunakan properti ini tidak memiliki efek samping atau masalah yang ditumbulkan.</p>
+    <p>Masalah yang akan ditimbulkan adalah jika sebuah elemen induk yang hanya memiliki satu elemen dengana menerapkan properti float akan memiliki nilai tinggi <strong>0px</strong>. Contohnya berikut.</p>
+    <img src="img-css-2/page-22-10.png" alt="">
+    <img src="img-css-2/page-22-11.png" alt="">
+    <p>Pada contoh tersebut, kita bisa melihat bahwa elemen gambar berada dalam sebuah container <code>div</code>. Namun, container tersebut tidak memiliki tinggi senilai gambar yang ditampilkan. Mengapa bisa demikian? Untuk lebih jelasnya, 
+        kita coba tambahkan paragraf di dalam container tersebut tanpa menggunakan properti <strong>float</strong></p>
+    <img src="img-css-2/page-22-12.png" alt="">
+    <img src="img-css-2/page-22-13.png" alt="">
+    <p>Hal ini menunjukan bahwa elemen yang menerapkan float "tidak dianggap ada" oleh induk elemen yang menaunginya karena dengan menggunakannya float elemen akan dikeluarkan dari <em>normal flow</em>.</p>
+    <p>Ada dua cara yang akan dibahasa di sini untuk menangani hal tersebut, yakni dengan menggunakan properti <strong>clear</strong> dan menetapkan nilai <strong>overflow: auto</strong> pada container.</p>
     
 
 
