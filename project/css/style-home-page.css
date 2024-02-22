@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -6,6 +10,18 @@ body {
 
 main {
     padding: 20px;
+    overflow: auto;
+}
+
+#content {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 30%;
+    padding-left: 20px;
 }
 
 .jumbotron {
@@ -48,6 +64,10 @@ nav li {
     text-align: center;
 }
 
+.profile img {
+    width: 200px;
+}
+
 .featured-image {
     width: 100%;
     max-height: 300px;
@@ -55,15 +75,11 @@ nav li {
     object-position: center;
 }
 
-.profile img {
-    width: 200px;
-}
-
 .card {
     padding: 20px;
     margin-top: 30px;
     box-shadow: 0 5px 6px 3px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 footer {

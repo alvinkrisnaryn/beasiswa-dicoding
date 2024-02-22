@@ -753,8 +753,41 @@
     <img src="img-css-2/page-22-13.png" alt="">
     <p>Hal ini menunjukan bahwa elemen yang menerapkan float "tidak dianggap ada" oleh induk elemen yang menaunginya karena dengan menggunakannya float elemen akan dikeluarkan dari <em>normal flow</em>.</p>
     <p>Ada dua cara yang akan dibahasa di sini untuk menangani hal tersebut, yakni dengan menggunakan properti <strong>clear</strong> dan menetapkan nilai <strong>overflow: auto</strong> pada container.</p>
+    <h3>Clear Property</h3>
+    <p>Cara pertama adalah dengan menggunakan properti <strong>clear</strong>. Properti clear memang dibuat untuk menghilangkan sifat float. Dengan demikian, elemen yang menerapkan properti float akan kembali "dianggap ada". Namun, untuk menerapkan 
+        properti ini kita perlu membuat sebuah elemen kosong (biasanya menggunakan div tanpa konten) yang menerapkan properti clear.</p>
+    <p>Nilai dari properti clear merupakan nilai yang digunakan pada properti float. Sebab, properti clear akan menghapus sifat float sesuai dengan nilai yang diterapkan. Contohnya berikut.</p>
+    <img src="img-css-2/page-23-1.png" alt="">
+    <img src="img-css-2/page-23-2.png" alt="">
+    <p>Jika mengubah clear menjadi <strong>clear: right</strong>, hasilnya akan kembali seperti sebelum menerapkannya.</p>
+    <img src="img-css-2/page-23-3.png" alt="">
+    <p>Lalu, bagaimana jika terdapat dua elemen yang menerapkan nilai float berbeda (left dan right)? Ada satu nilai lagi yang dapat menghilangkan kedua sifat float tersebut, yakni nilai <strong>both</strong>. Gunakanlah nilai tersebut jika kita ingin
+        sepenuhnya menghilangkan sifat float pada elemen.</p>
+    <h3>Teknik Overflow</h3>
+    <p>Cara kedua adalah dengan menetapkan properti <strong>overflow: auto</strong> pada elemen yang menampung elemen float. Sebagian developer lebih memilih menggunakan cara ini karena lebih praktis dan tidak perlu membuat elemen baru ketika menggunakannya. 
+        Untuk menerapkannya sangatlah simpel, hanya tambahkan properti <strong>overflow</strong> dengan nilai <strong>auto</strong> pada container.</p>
+    <img src="img-css-2/page-23-4.png" alt="">
+    <img src="img-css-2/page-23-5.png" alt="">
+    <p>Hasil yang diperoleh pun sama seperti yang dilakukan dengan cara pertama (clear property).</p>
+    <h3>Konfigurasi Meta Tag Viewport untuk Responsibilitas Layout</h3>
+    <p>Setelah berhasil membuat layout menggunakan float, apakah terpikirkan bagaimana tampilan yang dihasilkan pada <em>mobile device</em>? Tampilan webite kita lebih baik ketika dibuka menggunakan laprop atau desktop, tetapi belum tentu akan sama pada 
+        <em>mobile device</em>.</p>
+    <p>Pada browser Google Chrome dan Mozilla Firefox, ada fitur inspeksi elemen. Fitur ini sangat banyak dan bermanfaat bagi developer web dalam membantu mengembangkan website. Hal yang pasti, pada inspector tersebut, ada fitur yang dapat mensimulasikan halaman 
+        website dalam tampilan yang lebih kecil, seperti perangkat mobile atau tablet. Untuk membuka fitur inspector, kita dapat menggunakan <em>keyboard shortcut</em>, seperti "CTRL + SHIFT + I" atau klik kanan dan pilih "Inspect"/"Inspact Page".</p>
+    <p>Berikut adalah contoh tampilan DevTools pada browser.</p>
+    <img src="" alt="">
+    <img src="" alt="">
+    <p>Kedua gambar di atas menunjukkan fitur inspection pada Google Chrome dan Mozilla Firefox. Untuk mensimulasikan tampilan <em>mobile device</em>, kita dapat menekan icon yang dilingkari pada gambar di atas.</p>
+    <p>Dengan demikian, tampilan browser akan seperti gambar berikut.</p>
+    <img src="" alt="">
+    <p>Di sini, kita bisa memilih device apa yang akan digunakan untuk mensimulasikan halaman. Untuk melihat tampilan dalam <em>mobile devices</em>, kita bisa memilih salah satu opsi <em>handphone</em> yang tersedia. Contohnya Iphone 12 Pro.</p>
+    <img src="" alt="">
+    <p>Lalu, setelah memilih tampilan pada <em>mobile devices</em>, apakah tampilan website sekarang sudah tampak baik? Tentu jawabannya tidak. Hal ini karena tampilan pada simulasi device di browser Google Chrome akan tampak seperti berikut.</p>
+    <img src="" alt="">
+    <p>Viewport merupakan area yang dapat dilihat oleh pengguna kita pada halaman website. Ukuran viewport bervariasi berdasarkan <em>device</em>-nya. Ukuran viewport pada sebuah peranti <em>mobile</em> lebih kecil dibandingkan dengan layar komputer dekstop.</p>
+    <p>Sebelum adanya tablet ataupun <em>handphone</em>, halaman website didesain hanya untuk ukuran layar komputer dekstop. Dengan demikian, banyak sekali website yang menerapkan tampilan dan ukuran yang statis. Jadi, ketika halaman tersebut diakses melalui 
+        <em>handphone</em> atau tablet, tampilannya akan mengecil karena tidak disesuaikan.</p>
     
-
 
     
 </body>
