@@ -812,5 +812,114 @@
             Silahkan jalankan hasil perubahan ini pada browser. Seharusnya, akan ada tampilan seperti card pada sekeliling elemen <code>article</code> dan <code>aside</code>.
         </li>
     </ol>
+    <h2>Latihan menerapkan Jumbotron dan Navigasi pada Elemen Header</h2>
+    <ol>
+        <li>
+            Silahkan buka proyek Halaman Profil terakhir dengan VSCode.
+        </li>
+        <li>
+            Silahkan buka berkas style.css dan buat CSS rule baru dengan selector .jumbotron. Jika sudah, terapkan properti beserta nilainya seperti berikut.
+            <!-- 
+                .jumbotron {
+                    font-size: 20px;
+                    padding: 60px;
+                    background-color: #00c8eb;
+                    text-align: center;
+                    color: white;
+                }
+             -->
+        </li>
+        <li>
+            Lalu, jangan lupa kita harus terapkan class jumbotron ini pada elemen <code>header</code> di berkas HTML. Untuk melakukannya, silakan bungkus elemen <code>h1</code> dan <code>p</code> di dalam <code>header</code> menggunakan elemen <code>div</code> dan berikan elemen ini class jumbotron.
+            <!-- 
+                <header>
+                    <div class="jumbotron">
+                        <h1>Bandung</h1>
+                        <p>
+                        Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.
+                        </p>
+                    </div>
+                    <nav>
+                        <ul>
+                        <li><a href="#sejarah">Sejarah</a></li>
+                        <li><a href="#geografis">Geografis</a></li>
+                        <li><a href="#wisata">Wisata</a></li>
+                        </ul>
+                    </nav>
+                </header>
+             -->
+        </li>
+        <li>
+            Alhasil, elemen header akan memiliki border yang sangat luas dan besar, seperti pada web browser anda saat ini.
+        </li>
+        <li>
+            Selesai dengan elemen jumbotron. Lanjut, kita akan memperbaiki tampilan <strong>navigasi</strong> juga agar terlihat cocok dengan header yang ditampilkan.
+            <!-- 
+                nav li {
+                    display: inline;
+                    list-style-type: none;
+                    margin-right: 20px;
+                    }
+             -->
+        </li>
+        <li>
+            Nilai <strong>inline</strong> pada properti <strong>display</strong> akan membuat elemen <code>li</code> menerapkan sifat inline element. Hal ini menyebabkan elemen akan ditampilkan tanpa membuat baris baru. Selain itu, properti <strong>list-style-type</strong> dengan nilai <strong>none</strong> akan menghilangkan tanda titik yang dihasilkan bagi setiap item pada list.
+        </li>
+        <li>
+            Selanjutnya, berilah <strong>background-color</strong> dan <strong>color</strong> pada navigasi agar tampak sesuai dengan header. Silakan buat CSS rule baru dengan selector <strong>nav</strong> dan atur dengan properti-properti tersebut beserta nilainya.
+            <!-- 
+                nav {
+                    background-color: #00a2c6;
+                    padding: 5px;
+                }
+             -->
+        </li>
+        <li>
+            Kemudian, untuk mengatur warna teks pada navigasi, silakan tambahkan properti <strong>color</strong> pada selector <strong>nav a</strong> yang sudah kita miliki.
+            <!-- 
+                nav a {
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    
+                    color: white;
+                }
+             -->
+        </li>
+        <li>
+            Dengan demikian, navigasi akan terlihat sesuai dengan header yang ditampilkan.
+        </li>
+    </ol>
+    <h2>Latihan menyesuaikan Padding dan Margin pada Elemen Body dan Main</h2>
+    <ol>
+        <li>
+            Silahkan buka proyek Halaman Profil terakhir dengan VSCode.
+        </li>
+        <li>
+            Kita akan menyesuaikan margin dan padding pada elemen <code>body</code> dan <code>main</code>. Pertama, kita hilangkan nilai margin dan padding dengan menuliskan properti margin dan padding bernilai 0 pada selector body. Silakan tambahkan kode bercetak tebal berikut.
+            <!-- 
+                body {
+                    font-family: 'Quicksand', sans-serif;
+                    
+                    margin: 0;
+                    padding: 0;
+                }
+             -->
+        </li>
+        <li>
+            Dengan demikian, layout yang ditampilkan akan memenuhi seluruh lebar dan tinggi jika dijalankan di browser.
+        </li>
+        <li>
+            Namun, untuk konten di dalam elemen <code>main</code> perlu sedikit tambahan jarak agar dapat ditampilkan dengan lebih nyaman. Kita dapat atur jarak tersebut menggunakan padding pada selector main. Silakan tuliskan CSS rule baru dengan selector main dan beri ia nilai 20px pada properti padding. Tambahkan kode pada style.css dengan kode bercetak tebal berikut.
+            <!--                  
+                main {
+                    padding: 20px;
+                }
+             -->
+        </li>
+        <li>
+            Alhasil website akan tampak lebih nyaman dilihat sekarang
+        </li>
+    </ol>
 </body>
 </html>
