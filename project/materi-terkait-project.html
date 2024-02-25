@@ -921,5 +921,91 @@
             Alhasil website akan tampak lebih nyaman dilihat sekarang
         </li>
     </ol>
+    <h2>Latihan Menerapkan Float pada Elemen Content dan Aside</h2>
+    <ol>
+        <li>
+            Silahkan buka proyek Halaman Profil terakhir dengan VSCode.
+        </li>
+        <li>
+            Silahkan buka berkas style.css dan buat CSS rule baru dengan selector #content serta berikan properti float dengan nilai left.
+            <!-- 
+                #content {
+                    float: left;
+                }
+             -->
+        </li>
+        <li>
+            Tambahkan juga nilai lebar elemennya. Pada kasus ini, kita pakai nilai 75% untuk menetapkan lebar #content.
+            <!-- 
+                #content {
+                    float: left;
+                    width: 75%;
+                }
+             -->
+        </li>
+        <li>
+            Ketika dibuka hasilnya pada browser, tampilan akan menjadi berantakan seperti pada jendela web browser kalian.
+        </li>
+        <li>
+            Hal tersebut normal karena kita belum menetapkan nilai float pada elemen <aside>. Oleh karena itu, elemen <aside> dan <footer> akan berpindah menempati ruang yang sebelumnya digunakan oleh <strong>#content</strong> karena permasalahan keluar dari normal flow.
+                <p>Kita akan mengatasi masalah di atas secara bertahap. Selanjutnya, kita terapkan juga properti <strong>float</strong> dengan nilai <strong>right</strong> pada elemen <code>aside</code>.</p>
+            <!-- 
+                aside {
+                    float: right;
+                }
+             -->
+        </li>
+        <li>
+            Jangan lupa juga tetapkan ukuran lebar pada elemen <code>aside</code>. Elemen content sudah menerapkan 75% lebar dari parent sehingga elemen <code>aside</code> hanya dapat memiliki 25% ruang yang tersedia untuk ditempati. Silakan tetapkan nilai 25% pada properti <strong>width</strong> untuk elemen ini
+            <!-- 
+                aside {
+                    float: right;
+
+                    width: 25%;
+                }
+             -->
+        </li>
+        <li>
+            Jika hasil perubahan dijalankan, tampilan akan menjadi lebih mengerikan seperti berikut dari sebelumnya.
+        </li>
+        <li>
+            Hasil di atas terjadi karena tinggi dari elemen <code>main</code> sebesar 0 piksel. Mengapa elemen ini menjadi seperti demikian? Hal ini karena elemen <strong>#content</strong> dan <code>aside</code> dianggap tidak ada oleh elemen <code>main</code> (parent element) sehingga elemen di bawahnya (<code>footer</code>) akan naik mengisi ruang kosong. Agar tidak seperti demikian, kita perlu tetapkan <strong>overflow: auto</strong> pada elemen <code>main</code>.
+                <p>Silakan tambahkan properti <strong>overflow</strong> dengan nilai auto pada selector <strong>main</strong> yang sudah kita miliki sebelumnya.</p>
+            <!-- 
+                main {
+                    padding: 20px;
+                    
+                    overflow: auto;
+                }
+             -->
+        </li>
+        <li>
+            Setelah itu, tampilan website sudah lebih baik dan elemen <code>footer</code> sudah berada pada posisi yang seharusnya.
+        </li>
+        <li>
+            Namun, kita perlu memberikan sedikit jarak horizontal antara <strong>div id="content"</strong> dan <code>aside</code> agar tidak tampak berhimpitan. Solusinya, tambahkan <strong>padding-left</strong> pada <code>aside</code> agar konten yang ditampilkan dapat rata ke kiri.
+            <p>Silakan tambahkan properti <strong>padding-left</strong> dengan nilai 20px pada selector <strong>aside</strong>.</p>
+        <!-- 
+            aside {
+                float: right;
+                width: 25%;
+                
+                padding-left: 20px;
+            }
+         -->
+        </li>
+        <li>
+            Yang terakhir, Letak elemen <code>aside</code> berada di bawah <strong>#content</strong> sekarang. Hal ini karena kita menambahkan padding pada <code>aside</code> sehingga lebar elemen sudah bukan 25% lagi.
+            <p>Untuk mengatasinya, kita bisa ubah tipe pengukuran untuk dimensi kotaknya (elemen). Masih ingat materi tentang <strong>box-sizing</strong>, kan? Dengan menerapkan nilai border-box pada properti ini, kita dapat menentukan dimensi kotak dengan tepat, tanpa dipengaruhi oleh padding dan border.</p>
+            <!-- 
+                * {
+                    box-sizing: border-box;
+                }
+             -->
+        </li>
+        <li>
+            Setelah menetapkan rule tersebut, tampilan website akan kembali normal.
+        </li>
+    </ol>
 </body>
 </html>

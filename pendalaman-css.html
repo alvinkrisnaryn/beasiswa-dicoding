@@ -1948,5 +1948,92 @@
       kita. Kita akan membahas properti-properti pendukung ini pada materi
       berikutnya.
     </p>
+    <h3>Dasar-Dasar dan Terminologi Flexbox</h3>
+    <p>
+      Pertama, mari kita pahami mengenai istilah-istilah yang digunakan di
+      flexbox. Dalam penggunaannya, flexbox bukanlah properti yang bekerja
+      secara mandiri. Flexbox dapat melakukan banyak hal dengan melibatkan
+      berbagai properti pendukung. Beberapa di antaranya digunakan oleh flex
+      container dan sebagian lainnya digunakan oleh flex items.
+    </p>
+    <p>
+      Pada dasarnya, arah floe didasarkan pada flow dari elemen block (vertical)
+      dan flow dari elemen inline (horizontal). Flexbox sendiri memiliki arah
+      layout yang didasarkan pada <strong>flex-direction</strong>. Untuk
+      memperjelasnya, perhatikan gambar dibawah ini.
+    </p>
+    <img src="" alt="" />
+    <p>
+      Pada gambar di atas, terlihat bahwa ada dua istilah khusus pada elemen
+      yang menerapkan flexbox, yaitu flex container dan flex item.
+      <strong
+        >Flex container adalah parent element dari seluruh flex items.</strong
+      >
+      sedangkan
+      <strong
+        >flex items adalah elemen yang secara langsung merupakan child dari
+        parent element</strong
+      >
+    </p>
+    <p>
+      Pada asalnya, flex items akan dijajarkan secara horizontal (row), yaitu
+      dimulai dari main-start ke main-end(main axis). Namun, jangan khawatir,
+      kita bisa mengubahnya menggunakan properti yang memiliki peran tersebut.
+      Kita akan mempelajarinya dalam materi mendatang.
+    </p>
+    <ul>
+      <li>
+        Main axis: main axis dari flex container adalah arah sumbu utama untuk
+        flex item dijajarkan atau ditata. Perlu diingat, arah dari main axis
+        tidak selalu horizontal. Hal ini bergantung terhadap valur dari properti
+        <strong>flex-direction</strong>.
+      </li>
+      <li>
+        Main-start | main-end: flex item akan ditempatkan dalam flex container
+        yang berawal dari main-start dan main-end.
+      </li>
+      <li>
+        Main size: lebar atau tinggi dari flex item yang diposisikan pada sumbu
+        utama (main axis)
+      </li>
+      <li>
+        Cross axis: sumbu yang arahnya tegak lurus dengan main axis. Biasanya
+        ini terjadi ketika flexbox menerapkan valur wrap pada properti
+        <strong>flex-wrap</strong> sehingga susunan layout terlihat dua dimensi.
+      </li>
+      <li>
+        Cross start | cross end: flex item yang memenuhi ruang kosong flex
+        container secara vertikal, mulai dari cross-start hingga cross-end. Hal
+        ini dapat kita atur menggunakan properti <strong>align-items</strong>,
+        <strong>align-self</strong>, dan <strong>align-content</strong>.
+      </li>
+      <li>
+        Cross size: lebar atau tinggi dari sebuah flex item yang ditempatkan
+        pada dimensi cross.
+      </li>
+    </ul>
+    <p>
+      Banyak banget yaa istilahnya! Memang demikian. Jangan risau jika belum
+      bisa menghafalkan secara cepat. Seiring berjalannya waktu, Anda akan mulai
+      paham terkait istilah-istilah tersebut. Salah satu upayanya adalah dengan
+      memahami pembahasan properti-properti CSS selanjutnya.
+    </p>
+    <h3>Properti-Properti pada Flex Items</h3>
+    <p>
+      Pada materi sebelumnya, kita telah mempelajari properti-properti pendukung
+      pada flex yang diterakan untuk flex container. Nah, sekarang kita akan
+      membahas properti-properti yang digunakan pada flex items.
+    </p>
+    <h3>Order</h3>
+    <img src="" alt="" />
+    <p>
+      Secara asalnya, flex items akan diletakkan sesuai dengan urutan penulisan
+      kode. Namun, dengan properti <strong>order</strong>, kita bisa mengatur
+      urutan susuna flex items.
+    </p>
+    <img src="" alt="" />
+    <p>Anda dapat praktik langsung pada interactive code berikut.</p>
+    <img src="" alt="" />
+    <img src="" alt="" />
   </body>
 </html>
