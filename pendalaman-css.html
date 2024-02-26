@@ -2025,15 +2025,89 @@
       membahas properti-properti yang digunakan pada flex items.
     </p>
     <h3>Order</h3>
-    <img src="" alt="" />
+    <img src="img-css-3/page-26-1.png" alt="" />
     <p>
       Secara asalnya, flex items akan diletakkan sesuai dengan urutan penulisan
       kode. Namun, dengan properti <strong>order</strong>, kita bisa mengatur
       urutan susuna flex items.
     </p>
-    <img src="" alt="" />
+    <img src="img-css-3/page-26-2.png" alt="" />
     <p>Anda dapat praktik langsung pada interactive code berikut.</p>
-    <img src="" alt="" />
-    <img src="" alt="" />
+    <img src="img-css-3/page-26-3.png" alt="" />
+    <img src="img-css-3/page-26-4.png" alt="" />
+    <h3>Flex Grow</h3>
+    <img src="img-css-3/page-26-5.png" alt="" />
+    <p>
+      Ketika kita membuat layout dengan flexbox, flex item akan dijajarkan serta
+      memiliki lebar sesuai dengan ukuran kontennya. Bisa saja flex container
+      akan meninggalkan sisa ruang meski ukuran konten dari flex items tidak
+      memenuhi flex container.
+    </p>
+    <p>
+      Jika anda tidak nyaman dengan layout seperti ini, kita dapat mengatur flex
+      items agar selalu memenuhi flex container. Di sinilah peran properti
+      <strong>flex-grow</strong>. Properti ini akan melakukan grow pada main
+      axis sehingga tidak akan menyisakan ruang kosong pada flex container
+    </p>
+    <p>
+      Flex grow akan melakukan pendistribusian sisa ruang dalam container kepada
+      seluruh child element dengan porsi yang sama (adil). Jika salah satu child
+      element memiliki flex grow dengan nilai dua, child element tersebut akan
+      mendapatkan pembagian porsi dua kali lebih besar dibanding child element
+      yang hanya memiliki porsi dua kali lebih besar dibanding child element
+      yang hanya memiliki satu porsi. Nilai yang diberikan pada properti ini
+      adalah angka tanpa satuan (<em>unitless</em>).
+    </p>
+    <img src="img-css-3/page-26-6.png" alt="" />
+    <p>Anda dapat praktik langsung pada interactive code berikut.</p>
+    <img src="img-css-3/page-26-7.png" alt="" />
+    <img src="img-css-3/page-26-8.png" alt="" />
+    <h3>Flex Shrink</h3>
+    <p>
+      Properti ini memiliki kemampuan untuk menyusutkan atau menciutkan ukuran
+      child element jika ukurannya tidak mencukupi ruang container. Nilai yang
+      diberikan pada properti ini adalah angka tanpa satuan (<em>unitless</em>)
+    </p>
+    <img src="img-css-3/page-26-9.png" alt="" />
+    <p>
+      Secara default, nilai dari properti ini adalah 1. Jika kita memberikan
+      nilai 0, ukuran child element tidak akan menciut.
+    </p>
+    <p>Anda dapat praktik langsung pada interactive code berikut.</p>
+    <img src="img-css-3/page-26-10.png" alt="" />
+    <h3>Flex Basis</h3>
+    <p>
+      Properti ini akan memberikan ukuran default sebelum sisa ruang container
+      didistribusikan kepada flex items. Nilai yang didukung untuk properti ini
+      terkait ukuran dimensi (width dan height), yaitu 2rem, 20%, dan lainnya.
+    </p>
+    <img src="img-css-3/page-26-11.png" alt="" />
+    <p>Anda dapat praktik langsung pada interactive code berikut.</p>
+    <img src="img-css-3/page-26-12.png" alt="" />
+    <img src="img-css-3/page-26-13.png" alt="" />
+    <h3>Align Self</h3>
+    <img src="img-css-3/page-26-14.png" alt="" />
+    <p>
+      Properti ini memiliki tingkah laku yang sama dengan properti align items.
+      Properti ini dapat mengatur posisi child element secara cross=axis. Namun,
+      properti ini hanya berlaku untuk child element. Jika kita ingin
+      mengecualikan child element di antara child element lainnya gunakanlah
+      properti ini.
+    </p>
+    <img src="img-css-3/page-26-15.png" alt="" />
+    <p>Anda dapat praktik langsung pada interactive code berikut.</p>
+    <img src="img-css-3/page-26-16.png" alt="" />
+    <img src="img-css-3/page-26-17.png" alt="" />
+    <p>
+      Lengkap sudah pembahasan properti-properti yang bermanfaat dalam layouting
+      dengan flexbox. Kami yakin bahwa anda sudah paham dengan berbagai properti
+      yang telah dipelajari. Mereka adalah hal-hal fundamental dalam memahirkan
+      teknik layouting ini. Namun, perlu diketahui bahwa teori saja tidaklah
+      cukup.
+    </p>
+    <p>
+      Oleh karena itu, langsung saja kita bermain pada proyek Halaman Profil
+      Bandung. Menarik!
+    </p>
   </body>
 </html>
